@@ -1,0 +1,23 @@
+menu:
+  keppler_services:
+    name: Keppler Services
+    current: ['/']
+    url_path: /
+    icon: rocket
+    model: User
+    environment: all
+    position: 4
+    submenu:
+      - service:
+          name: service
+          url_path: /admin/services/services
+          icon: layers
+          current: ['/admin/services/services']
+          model: KepplerServices::Service
+
+      # - new:
+      #     name: + Add new module
+      #     url_path: /url_path
+      #     current: ['/current_path']
+      #     enviroment: development
+      #     model: User
