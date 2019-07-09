@@ -1,0 +1,22 @@
+en:
+  keppler:
+    sidebar-menu:
+      keppler-testimonials: Keppler testimonials
+      keppler-testimonials-submenu:
+        testimony: Testimony
+    permissions:
+    models:
+      singularize:
+        testimony: testimony
+      pluralize:
+        testimonies: testimonies
+    modules:
+      admin/testimony: Testimony
+    messages:
+    actions:
+  activerecord:
+    attributes:
+    errors:
+      messages:
+  errors:
+  helpers:

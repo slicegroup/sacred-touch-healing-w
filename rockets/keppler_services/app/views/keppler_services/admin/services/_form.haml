@@ -20,9 +20,13 @@
               %tbody
                 .form-padding
                   .col-xs-12
-                    = f.input :name, as: :string
+                    = f.input :title, as: :string
                   .col-xs-12
-                    = f.input :description, as: :ckeditor, input_html: { ckeditor: { toolbar: 'mini' } }
+                    = f.input :description_en, as: :ckeditor, input_html: { ckeditor: { toolbar: 'mini' } }, label: "Descripción en inglés"
+                  .col-xs-12
+                    = f.input :description_es, as: :ckeditor, input_html: { ckeditor: { toolbar: 'mini' } }, label: "Descripción en español"
+                  .col-xs-12
+                    = f.input :images, as: :keppler_file, multiple: true, label: "Imagenes" # , max_size: 225 
                   .col-xs-12
                     .pull-right
                       = f.button :submit, t('keppler.actions.save'), name: '_save', class: 'btn-primary'

@@ -51,6 +51,15 @@ PATH
       rails (= 5.2.0)
       simple_form
 
+PATH
+  remote: rockets/keppler_testimonials
+  specs:
+    keppler_testimonials (0.1.0)
+      haml_rails
+      pundit
+      rails (= 5.2.0)
+      simple_form
+
 GEM
   remote: https://rubygems.org/
   remote: https://rails-assets.org/
@@ -622,6 +631,7 @@ DEPENDENCIES
   keppler_ga_dashboard!
   keppler_languages!
   keppler_services!
+  keppler_testimonials!
   loofah (>= 2.2.3)
   mini_magick (= 4.8.0)
   nprogress-rails (= 0.2.0.2)

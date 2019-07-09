@@ -9,11 +9,12 @@ module KepplerServices
     include Downloadable
     include Sortable
     include Searchable
+    mount_uploaders :images, AttachmentUploader
     acts_as_list
     acts_as_paranoid
 
     def self.index_attributes
-      %i[name]
+      %i[title]
     end
   end
 end
