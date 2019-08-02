@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "Cocogoose";
+  font-weight: normal;
+  font-style: "Regular";
+  src: url("../fonts/Cocogoose.eot") format("eot");
+  src: url("../fonts/Cocogoose.svg") format("svg"), url("../fonts/Cocogoose.ttf") format("ttf"), url("../fonts/Cocogoose.woff") format("woff");
+}
+
+.img-banner {
+  border-radius: 5px;
+}
+
+.content-img {
+  height: 210px !important;
+  margin-bottom: 10px;
+}
+
+.content-img img {
+  height: 100% !important;
+  object-fit: cover;
+  width: 100%;
+}
+
+.content-img-float {
+  position: absolute;
+  bottom: -30px;
+  left: 21%;
+}
+
+.content-img-float img {
+  width: 220px;
+  opacity: 0.1;
+}
+
+.license {
+  margin-top: 80px;
+  padding-top: 100px;
+  padding-bottom: 40px;
+}
+
+.about {
+  padding-top: 80px;
+  margin-top: 50px;
+  padding-bottom: 0px;
+  background-image: url(../img/back_about.png);
+  background-repeat: repeat-y;
+  background-position: center top;
+}
+
+.columns-item {
+  padding: 0 40px 35px;
+  border-radius: 8px;
+  min-height: 280px;
+  height: 300px;
+}
+
+.content-text-footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 140px;
+}

@@ -1,0 +1,38 @@
+%footer#Footer.clearfix
+  .widgets_wrapper{:style => "padding:10px 0"}
+    .container
+      .column.one-third
+        %aside.widget_text.widget.widget_custom_html
+          .textwidget.custom-html-widget
+            %hr.no_line{:style => "margin: 0 auto 15px"}/
+            .image_frame.image_item.no_link.scale-with-grid.aligncenter.no_border
+              .image_wrapper{ :style => "display: flex;"}
+                %img.scale-with-grid{:src => "assets/img/iso degradado.svg", :style => "width: 70px;"}/
+      .column.one-third
+        %aside.widget_text.widget.widget_custom_html
+          .textwidget.custom-html-widget.content-text-footer
+            %h5{:style => "text-align: center"}
+              %span.themecolor Sacred Touch Healing 
+              %br/
+              Houston, Tx. United States.
+              %br/
+              // Melbourne, Victoria 3000
+      .column.one-third
+        %aside.widget_text.widget.widget_custom_html
+          .textwidget.custom-html-widget.content-text-footer{:style => "justify-content: flex-end;"}
+            
+            %p{:style => "font-size: 30px; line-height: 35px; text-align: center"}
+              %a{:href => "#"}
+                %i.fa.fa-facebook
+              %a{:href => "#"}
+                %i.fa.fa-instagram
+              %a{:href => "#"}
+                %i.fa.fa-twitter
+  .footer_copy
+    .container
+      .column.one
+        %a#back_to_top.button.button_js{:href => ""}
+          %i.fa.fa-chevron-up
+        .copyright
+          © 2019 Sacred Touch Healing  - by
+          %a{:href => "https://slicegroup.co/", :rel => "nofollow", :target => "_blank", :style => "font-size: 15px;"} Slicegroup

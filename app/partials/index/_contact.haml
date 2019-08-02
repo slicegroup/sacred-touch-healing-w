@@ -1,0 +1,23 @@
+#Contact.section.mcb-section{:style => "padding-top:0px; padding-bottom:40px"}
+  .section_wrapper.mcb-section-inner
+    .wrap.mcb-wrap.one.valign-top.clearfix
+      .mcb-wrap-inner
+        .column.mcb-column.one.column_column
+          .column_attr.clearfix.align_center.animate{"data-anim-type" => "fadeIn", :style => " background-color:#ecfafc; padding:80px 15% 40px; border-radius: 8px"}
+            %h4.themecolor{:style => "margin-bottom: 6px"} Contact me
+            %h2 Send your request
+            %hr.no_line{:style => "margin: 0 auto 20px"}/
+            #contactWrapper
+              %form#contactform
+                / One Second (1/2) Column
+                .column.one-second
+                  %input#name{"aria-invalid" => "false", "aria-required" => "true", :name => "name", :placeholder => "Your name", :size => "40", :type => "text"}/
+                / One Second (1/2) Column
+                .column.one-second
+                  %input#email{"aria-invalid" => "false", "aria-required" => "true", :name => "email", :placeholder => "Your e-mail", :size => "40", :type => "email"}/
+                .column.one
+                  %input#subject{"aria-invalid" => "false", :name => "subject", :placeholder => "Subject", :size => "40", :type => "text"}/
+                .column.one
+                  %textarea#body{"aria-invalid" => "false", :name => "body", :placeholder => "Message", :rows => "10", :style => "width:100%;"}
+                .column.one
+                  %input#submit{:onclick => "return check_values()", :type => "button", :value => "Send A Message"}/
