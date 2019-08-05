@@ -2,8 +2,8 @@
   font-family: "Cocogoose";
   font-weight: normal;
   font-style: "Regular";
-  src: url("../fonts/Cocogoose.eot") format("eot");
-  src: url("../fonts/Cocogoose.svg") format("svg"), url("../fonts/Cocogoose.ttf") format("ttf"), url("../fonts/Cocogoose.woff") format("woff");
+  src: url("../fonts/Cocogoose.ttf");
+  src: url("../fonts/Cocogoose.woff");
 }
 
 .img-banner {
@@ -24,11 +24,11 @@
 .content-img-float {
   position: absolute;
   bottom: -30px;
-  left: 21%;
+  left: 13%;
 }
 
 .content-img-float img {
-  width: 220px;
+  width: 300px;
   opacity: 0.1;
 }
 
@@ -38,20 +38,38 @@
   padding-bottom: 40px;
 }
 
+.content-column {
+  padding: 40px 20px 25px;
+  border-radius: 8px;
+}
+
+.content-column .image_item {
+  display: flex;
+  justify-content: center;
+}
+
 .about {
   padding-top: 80px;
   margin-top: 50px;
   padding-bottom: 0px;
-  background-image: url(../img/back_about.png);
+  background-image: url(../img/back_about2.png);
   background-repeat: repeat-y;
   background-position: center top;
 }
 
 .columns-item {
-  padding: 0 40px 35px;
+  padding: 10px 20px;
   border-radius: 8px;
   min-height: 280px;
   height: 300px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.columns-item p {
+  margin: 0;
 }
 
 .content-text-footer {
@@ -59,4 +77,12 @@
   justify-content: center;
   align-items: flex-end;
   height: 140px;
+}
+
+.description-testimonials {
+  font-family: "Roboto", sans-serif !important;
+}
+
+.description-services {
+  font-family: "Roboto", sans-serif !important;
 }

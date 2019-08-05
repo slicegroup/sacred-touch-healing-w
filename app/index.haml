@@ -17,9 +17,6 @@
     / FONTS
     %link{:href => "http://fonts.googleapis.com/css?family=Roboto:100,300,400,400italic,700", :rel => "stylesheet"}/
     %link{:href => "http://fonts.googleapis.com/css?family=Patua+One:100,300,400,400italic,700", :rel => "stylesheet"}/
-    %link{:href => "http://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic,900", :rel => "stylesheet"}/
-    %link{:href => "http://fonts.googleapis.com/css?family=Roboto:100,300,400,400italic,500,700,700italic", :rel => "stylesheet"}/
-    %link{:href => "http://fonts.googleapis.com/css?family=Arima+Madurai:100,300,400,400italic,500,700,700italic", :rel => "stylesheet"}/
     / CSS
     %link{:href => "assets/css/main.css", :rel => "stylesheet"}/
     %link{:href => "assets/css/styles.css", :rel => "stylesheet"}/
@@ -28,7 +25,7 @@
     %link{:href => "assets/css/font-awesome.css", :rel => "stylesheet"}/
     %link{:href => "assets/css/slick.css", :rel => "stylesheet"}/
     %link{:href => "assets/css/slick-theme.css", :rel => "stylesheet"}/
-    // %link{:rel => "stylesheet", :href => "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"}
+
     / Revolution Slider
     %link{:href => "assets/css/settings.css", :rel => "stylesheet"}/
   %body.color-custom.style-default.button-default.layout-full-width.one-page.no-content-padding.header-classic.minimalist-header-no.sticky-header.sticky-tb-color.ab-hide.subheader-both-center.menu-link-color.menuo-right.menuo-no-borders.footer-copy-center.mobile-tb-hide.mobile-side-slide.mobile-mini-mr-ll.tablet-sticky.mobile-header-mini.mobile-sticky.be-reg-20881
@@ -42,7 +39,8 @@
                 .top_bar_left.clearfix
                   .logo
                     %a#logo{"data-height" => "60", "data-padding" => "15", :href => "index.html", :title => "", :style => "margin-left: -25px;"}
-                      %img.logo-main.scale-with-grid{ :style => "width: 130px !important; margin-top: -35px;", :alt => "dietitian2", "data-height" => "50", "data-retina" => "assets/img/logo.png", :src => "assets/img/logo.png"}/
+                      .content-logo{:style =>"width: 150px;"}
+                        %img.logo-main.scale-with-grid{ :style => "width: 100% !important; margin-top: -35px;", :alt => "dietitian2", "data-height" => "50", "data-retina" => "assets/img/logo.png", :src => "assets/img/logo.png"}/
                       %img.logo-sticky.scale-with-grid{ :style => "margin-left: -25px;", :alt => "dietitian2", "data-height" => "50", "data-retina" => "images/retina-dietitian2.png", :src => "assets/img/logo-horizontal.png"}/
                       %img.logo-mobile.scale-with-grid{:alt => "dietitian2", "data-height" => "50", "data-retina" => "images/retina-dietitian2.png", :src => "assets/img/horizontal.png"}/
                       %img.logo-mobile-sticky.scale-with-grid{:alt => "dietitian2", "data-height" => "50", "data-retina" => "images/retina-dietitian2.png", :src => "assets/img/horizontal.png"}/
@@ -58,24 +56,15 @@
                         %li
                           %a{:href => "#Services"}
                             %span Services
-                        // %li
-                        //   %a{:href => "#Pricing"}
-                        //     %span Pricing
+
                         %li
                           %a{:href => "#License"}
                             %span License
                         %li
                           %a{:href => "#Testimonials"}
                             %span Testimonials
-                        // %li
-                        //   %a{:href => "#Contact"}
-                        //     %span Contact me
                     %a.responsive-menu-toggle{:href => "#"}
                       %i.icon-menu-fine
-                // .top_bar_right
-                //   .top_bar_right_wrapper
-                //     %a.button.button_theme.button_js.action_button{:href => "http://bit.ly/1M6lijQ", :target => "_blank"}
-                //       %span.button_label Buy now
           #mfn-rev-slider.mfn-main-slider
             #rev_slider_1_1_wrapper.rev_slider_wrapper.fullwidthbanner-container{"data-source" => "gallery", :style => "margin:0px auto;background:transparent;padding:0px;margin-top:0px;margin-bottom:0px"}
               #rev_slider_1_1.rev_slider.fullwidthabanner{"data-version" => "5.4.7.1", :style => "display:none;"}
@@ -84,7 +73,7 @@
                     %img.rev-slidebg{"data-bgfit" => "cover", "data-bgposition" => "center center", "data-bgrepeat" => "no-repeat", "data-no-retina" => "", :src => "http://betheme.muffingroupsc.netdna-cdn.com/be/dietitian2/wp-content/plugins/revslider/admin/assets/images/transparent.png", :title => "Home"}/
                     #slide-1-layer-6.tp-caption.tp-resizeme{"data-frames" => "[{\"delay\":10,\"speed\":300,\"frame\":\"0\",\"from\":\"opacity:0;\",\"to\":\"o:1;\",\"ease\":\"Power3.easeInOut\"},{\"delay\":\"wait\",\"speed\":300,\"frame\":\"999\",\"to\":\"opacity:0;\",\"ease\":\"Power3.easeInOut\"}]", "data-height" => "['none','none','none','none']", "data-hoffset" => "", "data-paddingbottom" => "[0,0,0,0]", "data-paddingleft" => "[0,0,0,0]", "data-paddingright" => "[0,0,0,0]", "data-paddingtop" => "[0,0,0,0]", "data-responsive_offset" => "on", "data-textalign" => "['inherit','inherit','inherit','inherit']", "data-type" => "image", "data-width" => "['none','none','none','none']", "data-x" => "right", "data-y" => "", :style => "z-index: 5"}
                       %img.img-banner{"data-hh" => "640px", "data-no-retina" => "", "data-ww" => "848px", :height => "640", :src => "https://images.unsplash.com/photo-1523681504355-8b4860f99a58?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80", :width => "848"}/
-                    #slide-1-layer-3.tp-caption.tp-resizeme{"data-frames" => "[{\"delay\":150,\"speed\":800,\"frame\":\"0\",\"from\":\"x:50px;opacity:0;\",\"to\":\"o:1;\",\"ease\":\"Power3.easeInOut\"},{\"delay\":\"wait\",\"speed\":300,\"frame\":\"999\",\"to\":\"opacity:0;\",\"ease\":\"Power3.easeInOut\"}]", "data-height" => "['auto']", "data-paddingbottom" => "[0,0,0,0]", "data-paddingleft" => "[0,0,0,0]", "data-paddingright" => "[0,0,0,0]", "data-paddingtop" => "[0,0,0,0]", "data-responsive_offset" => "on", "data-textalign" => "['inherit','inherit','inherit','inherit']", "data-type" => "text", "data-width" => "['auto']", "data-x" => "20", "data-y" => "70", :style => "z-index: 6; white-space: nowrap; font-size: 60px; line-height: 60px; font-weight: 700; color: #000000; letter-spacing: 0px;font-family:Arima Madurai"}
+                    #slide-1-layer-3.tp-caption.tp-resizeme{"data-frames" => "[{\"delay\":150,\"speed\":800,\"frame\":\"0\",\"from\":\"x:50px;opacity:0;\",\"to\":\"o:1;\",\"ease\":\"Power3.easeInOut\"},{\"delay\":\"wait\",\"speed\":300,\"frame\":\"999\",\"to\":\"opacity:0;\",\"ease\":\"Power3.easeInOut\"}]", "data-height" => "['auto']", "data-paddingbottom" => "[0,0,0,0]", "data-paddingleft" => "[0,0,0,0]", "data-paddingright" => "[0,0,0,0]", "data-paddingtop" => "[0,0,0,0]", "data-responsive_offset" => "on", "data-textalign" => "['inherit','inherit','inherit','inherit']", "data-type" => "text", "data-width" => "['auto']", "data-x" => "20", "data-y" => "70", :style => "font-family: 'Cocogoose';z-index: 6; white-space: nowrap; font-size: 60px; line-height: 70px; font-weight: 500; color: #000000; letter-spacing: 0px;"}
                       Energy, Frequency
                       %br/
                       and Vibration.
@@ -92,7 +81,7 @@
                       -# Earth, Water, Fire,
                       -# %br/
                       -# Air and Space
-                    #slide-1-layer-4.tp-caption.tp-resizeme{"data-frames" => "", "data-height" => "['auto']", "data-paddingbottom" => "[0,0,0,0]", "data-paddingleft" => "[0,0,0,0]", "data-paddingright" => "[0,0,0,0]", "data-paddingtop" => "[0,0,0,0]", "data-responsive_offset" => "on", "data-textalign" => "['inherit','inherit','inherit','inherit']", "data-type" => "text", "data-width" => "['auto']", "data-x" => "20", "data-y" => "284", :style => "z-index: 7; white-space: nowrap; font-size: 16px; line-height: 23px; font-weight: 500; color: #667d80; letter-spacing: 0px;font-family:Arima Madurai"}
+                    #slide-1-layer-4.tp-caption.tp-resizeme{"data-frames" => "", "data-height" => "['auto']", "data-paddingbottom" => "[0,0,0,0]", "data-paddingleft" => "[0,0,0,0]", "data-paddingright" => "[0,0,0,0]", "data-paddingtop" => "[0,0,0,0]", "data-responsive_offset" => "on", "data-textalign" => "['inherit','inherit','inherit','inherit']", "data-type" => "text", "data-width" => "['auto']", "data-x" => "20", "data-y" => "284", :style => "z-index: 7; white-space: nowrap; font-size: 16px; line-height: 23px; font-weight: 300; color: #667d80; letter-spacing: 0px;font-family: 'Roboto';font-size: 17px;"}
                       Integrate and balance your physical, emotional, 
                       %br/
                       mental and etheric bodies. Remove energy

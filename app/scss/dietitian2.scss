@@ -482,7 +482,9 @@
 	}
 
 	.menuo-right #Top_bar .menu_wrapper {
-		float: right
+		float: right;
+		margin-right: -50px;
+
 	}
 
 	.menuo-right.header-stack:not(.header-center) #Top_bar .menu_wrapper {
@@ -2545,7 +2547,8 @@ select,
 #menu>ul>li>a,
 .action_button,
 #overlay-menu ul li a {
-	font-family: "Roboto", Arial, Tahoma, sans-serif;
+	font-family: "Cocogoose", Arial, Tahoma, sans-serif;
+	font-size: 14px;
 }
 
 #Subheader .title {
@@ -2557,16 +2560,22 @@ h2,
 h3,
 h4,
 .text-logo #logo {
-	font-family: "Arima Madurai", Arial, Tahoma, sans-serif;
+	font-family: "Cocogoose", Arial, Tahoma, sans-serif;
 }
 
 h5,
 h6 {
-	font-family: "Arima Madurai", Arial, Tahoma, sans-serif;
+	font-family: "Cocogoose",
+		Arial,
+		Tahoma,
+		sans-serif;
 }
 
 blockquote {
-	font-family: "Arima Madurai", Arial, Tahoma, sans-serif;
+	font-family: "Cocogoose",
+		Arial,
+		Tahoma,
+		sans-serif;
 }
 
 .chart_box .chart .num,
@@ -2596,8 +2605,8 @@ big,
 #menu>ul>li>a,
 a.button.action_button,
 #overlay-menu ul li a {
-	font-size: 15px;
-	font-weight: 500;
+	font-size: 13px;
+	font-weight: 300;
 	letter-spacing: 0px;
 }
 
@@ -2622,37 +2631,37 @@ h1,
 }
 
 h2 {
-	font-size: 50px;
+	font-size: 40px;
 	line-height: 60px;
-	font-weight: 700;
+	font-weight: 500;
 	letter-spacing: 0px;
 }
 
 h3 {
 	font-size: 40px;
 	line-height: 50px;
-	font-weight: 700;
+	font-weight: 500;
 	letter-spacing: 0px;
 }
 
 h4 {
 	font-size: 30px;
 	line-height: 40px;
-	font-weight: 700;
+	font-weight: 400;
 	letter-spacing: 0px;
 }
 
 h5 {
 	font-size: 20px;
 	line-height: 30px;
-	font-weight: 700;
+	font-weight: 500;
 	letter-spacing: 0px;
 }
 
 h6 {
 	font-size: 14px;
 	line-height: 25px;
-	font-weight: 700;
+	font-weight: 500;
 	letter-spacing: 0px;
 }
 
