@@ -42,8 +42,8 @@
                       .content-logo{:style =>"width: 150px;"}
                         %img.logo-main.scale-with-grid{ :style => "width: 100% !important; margin-top: -35px;", :alt => "dietitian2", "data-height" => "50", "data-retina" => "assets/img/logo.png", :src => "assets/img/logo.png"}/
                       %img.logo-sticky.scale-with-grid{ :style => "margin-left: -25px;", :alt => "dietitian2", "data-height" => "50", "data-retina" => "images/retina-dietitian2.png", :src => "assets/img/logo-horizontal.png"}/
-                      %img.logo-mobile.scale-with-grid{:alt => "dietitian2", "data-height" => "50", "data-retina" => "images/retina-dietitian2.png", :src => "assets/img/horizontal.png"}/
-                      %img.logo-mobile-sticky.scale-with-grid{:alt => "dietitian2", "data-height" => "50", "data-retina" => "images/retina-dietitian2.png", :src => "assets/img/horizontal.png"}/
+                      %img.logo-mobile.scale-with-grid{:alt => "dietitian2", "data-height" => "50", "data-retina" => "assets/img/logo.png", :src => "assets/img/logo.png"}/
+                      %img.logo-mobile-sticky.scale-with-grid{:alt => "dietitian2", "data-height" => "50", "data-retina" => "assets/img/logo-horizontal.png", :src => "assets/img/logo-horizontal.png"}/
                   .menu_wrapper
                     %nav#menu
                       %ul#menu-main-menu.menu.menu-main
@@ -64,7 +64,7 @@
                           %a{:href => "#Testimonials"}
                             %span Testimonials
                     %a.responsive-menu-toggle{:href => "#"}
-                      %i.icon-menu-fine
+                      %i.fa.fa-bars
           #mfn-rev-slider.mfn-main-slider
             #rev_slider_1_1_wrapper.rev_slider_wrapper.fullwidthbanner-container{"data-source" => "gallery", :style => "margin:0px auto;background:transparent;padding:0px;margin-top:0px;margin-bottom:0px"}
               #rev_slider_1_1.rev_slider.fullwidthabanner{"data-version" => "5.4.7.1", :style => "display:none;"}
@@ -81,7 +81,7 @@
                       -# Earth, Water, Fire,
                       -# %br/
                       -# Air and Space
-                    #slide-1-layer-4.tp-caption.tp-resizeme{"data-frames" => "", "data-height" => "['auto']", "data-paddingbottom" => "[0,0,0,0]", "data-paddingleft" => "[0,0,0,0]", "data-paddingright" => "[0,0,0,0]", "data-paddingtop" => "[0,0,0,0]", "data-responsive_offset" => "on", "data-textalign" => "['inherit','inherit','inherit','inherit']", "data-type" => "text", "data-width" => "['auto']", "data-x" => "20", "data-y" => "284", :style => "z-index: 7; white-space: nowrap; font-size: 16px; line-height: 23px; font-weight: 300; color: #667d80; letter-spacing: 0px;font-family: 'Roboto';font-size: 17px;"}
+                    #slide-1-layer-4.tp-caption.tp-resizeme.description-banner{"data-frames" => "", "data-height" => "['auto']", "data-paddingbottom" => "[0,0,0,0]", "data-paddingleft" => "[0,0,0,0]", "data-paddingright" => "[0,0,0,0]", "data-paddingtop" => "[0,0,0,0]", "data-responsive_offset" => "on", "data-textalign" => "['inherit','inherit','inherit','inherit']", "data-type" => "text", "data-width" => "['auto']", "data-x" => "20", "data-y" => "284", :style => "z-index: 7; white-space: nowrap; font-size: 16px; line-height: 23px; font-weight: 300; color: #667d80; letter-spacing: 0px;font-family: 'Roboto';font-size: 17px;margin-top: -20px;"}
                       Integrate and balance your physical, emotional, 
                       %br/
                       mental and etheric bodies. Remove energy
@@ -110,10 +110,10 @@
     #Side_slide.right.dark{"data-width" => "250"}
       .close-wrapper
         %a.close{:href => "#"}
-          %i.icon-cancel-fine
+          %i.fa.fa-close
       .extras
-        %a.button.button_theme.button_js.action_button{:href => "http://bit.ly/1M6lijQ", :target => "_blank"}
-          %span.button_label Buy now
+        // %a.button.button_theme.button_js.action_button{:href => "http://bit.ly/1M6lijQ", :target => "_blank"}
+        //   %span.button_label Buy now
         .extras-wrapper
       .menu_wrapper
     #body_overlay
@@ -142,51 +142,51 @@
     %script{:src => "assets/js/email.js"}
     :javascript
       var revapi1, tpj;
-      		  ( function() {
-      				  if (!/loaded|interactive|complete/.test(document.readyState))
-      					  document.addEventListener("DOMContentLoaded", onLoad)
-      				  else
-      					  onLoad();
-      				  function onLoad() {
-      					  if (tpj === undefined) {
-      						  tpj = jQuery;
-      						  if ("off" == "on")
-      							  tpj.noConflict();
-      					  }
-      					  if (tpj("#rev_slider_1_1").revolution == undefined) {
-      						  revslider_showDoubleJqueryError("#rev_slider_1_1");
-      					  } else {
-      						  revapi1 = tpj("#rev_slider_1_1").show().revolution({
-      							  sliderType : "standard",
-      							  sliderLayout : "auto",
-      							  dottedOverlay : "none",
-      							  delay : 9000,
-      							  navigation : {
-      								  onHoverStop : "off",
-      							  },
-      							  visibilityLevels : [1240, 1024, 778, 480],
-      							  gridwidth : 1240,
-      							  gridheight : 640,
-      							  lazyType : "none",
-      							  shadow : 0,
-      							  spinner : "spinner3",
-      							  stopLoop : "off",
-      							  stopAfterLoops : -1,
-      							  stopAtSlide : -1,
-      							  shuffle : "off",
-      							  autoHeight : "off",
-      							  disableProgressBar : "on",
-      							  hideThumbsOnMobile : "off",
-      							  hideSliderAtLimit : 0,
-      							  hideCaptionAtLimit : 0,
-      							  hideAllCaptionAtLilmit : 0,
-      							  debugMode : false,
-      							  fallbacks : {
-      								  simplifyAll : "off",
-      								  nextSlideOnWindowFocus : "off",
-      								  disableFocusListener : false,
-      							  }
-      						  });
-      					  };
-      				  };
-      			  }());
+        ( function() {
+            if (!/loaded|interactive|complete/.test(document.readyState))
+              document.addEventListener("DOMContentLoaded", onLoad)
+            else
+              onLoad();
+            function onLoad() {
+              if (tpj === undefined) {
+                tpj = jQuery;
+                if ("off" == "on")
+                  tpj.noConflict();
+              }
+              if (tpj("#rev_slider_1_1").revolution == undefined) {
+                revslider_showDoubleJqueryError("#rev_slider_1_1");
+              } else {
+                revapi1 = tpj("#rev_slider_1_1").show().revolution({
+                  sliderType : "standard",
+                  sliderLayout : "auto",
+                  dottedOverlay : "none",
+                  delay : 9000,
+                  navigation : {
+                    onHoverStop : "off",
+                  },
+                  visibilityLevels : [1240, 1024, 778, 480],
+                  gridwidth : 1240,
+                  gridheight : 640,
+                  lazyType : "none",
+                  shadow : 0,
+                  spinner : "spinner3",
+                  stopLoop : "off",
+                  stopAfterLoops : -1,
+                  stopAtSlide : -1,
+                  shuffle : "off",
+                  autoHeight : "off",
+                  disableProgressBar : "on",
+                  hideThumbsOnMobile : "off",
+                  hideSliderAtLimit : 0,
+                  hideCaptionAtLimit : 0,
+                  hideAllCaptionAtLilmit : 0,
+                  debugMode : false,
+                  fallbacks : {
+                    simplifyAll : "off",
+                    nextSlideOnWindowFocus : "off",
+                    disableFocusListener : false,
+                  }
+                });
+              };
+            };
+          }());
