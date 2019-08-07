@@ -4121,7 +4121,7 @@ body:not(.with_aside) .portfolio_group.list .portfolio-item .portfolio-item-fw-w
 
 #Footer .footer_copy .one {
   margin-bottom: 20px;
-  padding-top: 30px;
+  padding-top: 0px;
 }
 
 #Footer .footer_copy .copyright {

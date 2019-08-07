@@ -23,10 +23,10 @@ $(document).ready(function () {
 
 $('.slider-license').slick({
   infinite: true,
-  autoplay: true,
+  autoplay: false,
   slidesToShow: 3,
   slidesToScroll: 1,
-  dots: false,
+  dots: true,
   arrows: true,
   responsive: [{
       breakpoint: 1200,
