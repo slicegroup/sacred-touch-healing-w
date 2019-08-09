@@ -256,7 +256,6 @@ p a:visited {
 img.scale-with-grid,
 #Content img {
   max-width: 100%;
-  height: auto;
 }
 
 .google-map img {
@@ -627,7 +626,6 @@ button {
   overflow: hidden;
   -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0);
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0);
-  background-image: url(../images/box_shadow_button.png);
   background-repeat: repeat-x;
 }
 

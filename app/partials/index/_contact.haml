@@ -3,9 +3,9 @@
     .wrap.mcb-wrap.one.valign-top.clearfix
       .mcb-wrap-inner
         .column.mcb-column.one.column_column
-          .column_attr.clearfix.align_center.animate{"data-anim-type" => "fadeIn", :style => " background-color:#ecfafc; padding:80px 15% 40px; border-radius: 8px"}
-            %h4.themecolor{:style => "margin-bottom: 6px"} Contact me
-            %h2 Send your request
+          .column_attr.clearfix.align_center.animate{"data-anim-type" => "fadeIn", :style => "padding:80px 0% 40px; border-radius: 8px"}
+            %h4.themecolor{:style => "margin-bottom: 6px"} Lest Talk
+            %h2 Resquest for consultation
             %hr.no_line{:style => "margin: 0 auto 20px"}/
             #contactWrapper
               %form#contactform
@@ -21,3 +21,27 @@
                   %textarea#body{"aria-invalid" => "false", :name => "body", :placeholder => "Message", :rows => "10", :style => "width:100%;"}
                 .column.one
                   %input#submit{:onclick => "return check_values()", :type => "button", :value => "Send A Message"}/
+              .content-details
+                .contact-info
+                  %h4.themecolor{:style => "margin-bottom: 6px"} Contact Details
+                  %ul.content-details__ul
+                    %li
+                      .icon-holder
+                        %i.fa.fa-location-arrow
+                      .text-holder
+                        %p
+                          Address: Houston, Tx. United States
+                          -# %br>/
+                          -# Str, New York, NY 10012, USA
+                    %li
+                      .icon-holder
+                        %i.fa.fa-phone
+                      .text-holder
+                        %p
+                          Phone: + 713 5606 940
+                    %li
+                      .icon-holder
+                        %i.fa.fa-envelope
+                      .text-holder
+                        %p Email: Contact@Sacredtouchh.com
+

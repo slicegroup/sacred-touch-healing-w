@@ -33,42 +33,48 @@
       #Header_wrapper
         %header#Header
           .header_placeholder
-          = render ('app/partials/navbar.haml')
-          #mfn-rev-slider.mfn-main-slider
-            #rev_slider_1_1_wrapper.rev_slider_wrapper.fullwidthbanner-container{"data-source" => "gallery", :style => "margin:0px auto;background:transparent;padding:0px;margin-top:0px;margin-bottom:0px"}
-              #rev_slider_1_1.rev_slider.fullwidthabanner{"data-version" => "5.4.7.1", :style => "display:none;"}
-                %ul
-                  %li{"data-description" => "", "data-easein" => "default", "data-easeout" => "default", "data-hideafterloop" => "0", "data-hideslideonmobile" => "off", "data-index" => "rs-1", "data-masterspeed" => "300", "data-param1" => "", "data-param10" => "", "data-param2" => "", "data-param3" => "", "data-param4" => "", "data-param5" => "", "data-param6" => "", "data-param7" => "", "data-param8" => "", "data-param9" => "", "data-rotate" => "0", "data-saveperformance" => "off", "data-slotamount" => "default", "data-title" => "Slide", "data-transition" => "fade"}
-                    %img.rev-slidebg{"data-bgfit" => "cover", "data-bgposition" => "center center", "data-bgrepeat" => "no-repeat", "data-no-retina" => "", :src => "http://betheme.muffingroupsc.netdna-cdn.com/be/dietitian2/wp-content/plugins/revslider/admin/assets/images/transparent.png", :title => "Home"}/
-                    #slide-1-layer-6.tp-caption.tp-resizeme{"data-frames" => "[{\"delay\":10,\"speed\":300,\"frame\":\"0\",\"from\":\"opacity:0;\",\"to\":\"o:1;\",\"ease\":\"Power3.easeInOut\"},{\"delay\":\"wait\",\"speed\":300,\"frame\":\"999\",\"to\":\"opacity:0;\",\"ease\":\"Power3.easeInOut\"}]", "data-height" => "['none','none','none','none']", "data-hoffset" => "", "data-paddingbottom" => "[0,0,0,0]", "data-paddingleft" => "[0,0,0,0]", "data-paddingright" => "[0,0,0,0]", "data-paddingtop" => "[0,0,0,0]", "data-responsive_offset" => "on", "data-textalign" => "['inherit','inherit','inherit','inherit']", "data-type" => "image", "data-width" => "['none','none','none','none']", "data-x" => "right", "data-y" => "", :style => "z-index: 5"}
-                      %img.img-banner{"data-hh" => "640px", "data-no-retina" => "", "data-ww" => "848px", :height => "640", :src => "https://images.unsplash.com/photo-1523681504355-8b4860f99a58?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80", :width => "848"}/
-                    #slide-1-layer-3.tp-caption.tp-resizeme{"data-frames" => "[{\"delay\":150,\"speed\":800,\"frame\":\"0\",\"from\":\"x:50px;opacity:0;\",\"to\":\"o:1;\",\"ease\":\"Power3.easeInOut\"},{\"delay\":\"wait\",\"speed\":300,\"frame\":\"999\",\"to\":\"opacity:0;\",\"ease\":\"Power3.easeInOut\"}]", "data-height" => "['auto']", "data-paddingbottom" => "[0,0,0,0]", "data-paddingleft" => "[0,0,0,0]", "data-paddingright" => "[0,0,0,0]", "data-paddingtop" => "[0,0,0,0]", "data-responsive_offset" => "on", "data-textalign" => "['inherit','inherit','inherit','inherit']", "data-type" => "text", "data-width" => "['auto']", "data-x" => "20", "data-y" => "70", :style => "font-family: 'Poppins';z-index: 6; white-space: nowrap; font-size: 60px; line-height: 70px; font-weight: 700; color: #000000; letter-spacing: 0px;margin-left: 5px;margin-top: 30px;"}
-                      Energy, Frequency
-                      %br/
-                      and Vibration.
-                    #slide-1-layer-4.tp-caption.tp-resizeme.description-banner{"data-frames" => "", "data-height" => "['auto']", "data-paddingbottom" => "[0,0,0,0]", "data-paddingleft" => "[0,0,0,0]", "data-paddingright" => "[0,0,0,0]", "data-paddingtop" => "[0,0,0,0]", "data-responsive_offset" => "on", "data-textalign" => "['inherit','inherit','inherit','inherit']", "data-type" => "text", "data-width" => "['auto']", "data-x" => "20", "data-y" => "284", :style => "margin-left: 5px;z-index: 7; white-space: nowrap; font-size: 16px; line-height: 23px; font-weight: 300; color: #667d80; letter-spacing: 0px;font-family: 'Roboto';font-size: 17px;margin-top: 20px;"}
-                      Integrate and balance your physical, emotional, 
-                      %br/
-                      mental and etheric bodies. Remove energy
-                      %br/
-                      blockages and work with your cellular 
-                      %br/
-                      memory and DNA.
-                    %a#slide-1-layer-5.tp-caption.rev-btn.tp-resizeme.scroll.btn.btn-banner{"data-type" => "button", "data-width" => "['auto']", "data-x" => "20", "data-y" => "383", :href => "#About", :target => "_self"} 
-                      %i.fa.fa-chevron-down
+          #Top_bar
+            .container
+              .column.one
+                .top_bar_left.clearfix
+                  .logo
+                    %a#logo{"data-height" => "60", "data-padding" => "15", :href => "index.html", :title => "", :style => "margin-left: -25px;"}
+                      .content-logo{:style =>"width: 150px;margin-left: 5px;"}
+                        %img.logo-main.scale-with-grid{ :style => "width: 100% !important; margin-top: -35px;", :alt => "dietitian2", "data-height" => "50", "data-retina" => "assets/img/logo.png", :src => "assets/img/logo.png"}/
+                      %img.logo-sticky.scale-with-grid{ :style => "margin-left: -25px;", :alt => "dietitian2", "data-height" => "50", "data-retina" => "images/retina-dietitian2.png", :src => "assets/img/logo-horizontal.png"}/
+                      %img.logo-mobile.scale-with-grid{:alt => "dietitian2", "data-height" => "50", "data-retina" => "assets/img/logo.png", :src => "assets/img/logo.png"}/
+                      %img.logo-mobile-sticky.scale-with-grid{:alt => "dietitian2", "data-height" => "50", "data-retina" => "assets/img/logo-horizontal.png", :src => "assets/img/logo-horizontal.png"}/
+                  .menu_wrapper
+                    %nav#menu
+                      %ul#menu-main-menu.menu.menu-main
+                        %li
+                          %a{:href => "index.html"}
+                            %span Home
+                        %li
+                          %a{:href => "#About"}
+                            %span About me
+                        %li
+                          %a{:href => "#Services"}
+                            %span Services
+
+                        %li
+                          %a{:href => "#License"}
+                            %span License
+                        %li
+                          %a{:href => "#Testimonials"}
+                            %span Testimonials
+                    %a.responsive-menu-toggle{:href => "#"}
+                      %i.fa.fa-bars
 
       #Content
         .content_wrapper.clearfix
           .sections_group
             .entry-content
-              = render ('app/partials/index/_about.haml')
+              = render ('app/partials/about/_parallax.haml')
             
-              = render ('app/partials/index/_services.haml')
+              = render ('app/partials/about/_about-info.haml')
               = render ('app/partials/index/_license.haml')
               = render ('app/partials/index/_testimonials.haml')
-              // = render ('app/partials/index/_pricing.haml')
-              // = render ('app/partials/index/_useful.haml')
-              // = render ('app/partials/index/_widget.haml')
               = render ('app/partials/index/_contact.haml')
       = render ('app/partials/index/_footer.haml')
     / side menu

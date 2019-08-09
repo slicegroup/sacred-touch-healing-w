@@ -1,3 +1,9 @@
+@import 'buttons';
+
+.img-banner {
+  border-radius: 5px;
+}
+
 .content-img {
   height: 210px !important;
 
@@ -97,23 +103,16 @@
   font-family: "Roboto", sans-serif !important;
 }
 
-// .description-banner {
-//   font-family: "Roboto", sans-serif !important;
-// }
-
 footer {
   background-color: #f8a3bc;
 }
-
-
 
 /** slider **/
 .slider-license .slick-dots {
   bottom: -30px;
 }
 
-.slider-license .slick-dots li button:before,
-  {
+.slider-license .slick-dots li button:before {
   color: gray;
   content: '';
   height: 12px;
@@ -127,4 +126,109 @@ footer {
 
 .column_testimonials {
   min-height: 400px;
+}
+
+
+/* contacto*/
+
+#contactWrapper {
+  display: grid;
+  grid-template-columns: 70% 30%;
+
+  .content-details {
+
+    .contact-info {
+      padding: 32px 10px 20px;
+      background: #ffffff;
+      border: 2px solid #f4f4f4;
+      display: block;
+    }
+  }
+}
+
+.content-details__ul {
+  margin-top: 15px !important;
+
+  li {
+    list-style: none !important;
+    display: flex;
+
+    .icon-holder {
+      margin-right: 10px;
+    }
+  }
+}
+
+/** about */
+.about-info {
+  padding: 100px 0px;
+}
+
+.about-parallax {
+  background-image: url(https://images.unsplash.com/photo-1482100199117-a4a38a64e7e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+  background-size: cover;
+  height: 70vh;
+  background-attachment: fixed;
+  position: relative;
+  background-position: 50% -140px;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #d291bc 0%, rgba(255, 255, 255, 0) 100%);
+    opacity: .8;
+  }
+}
+
+.about-info__content-info {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 10px;
+
+  .about-info__item {
+    // background-color: red;
+  }
+}
+
+.about-info__valor {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.about-info__subtitle {
+  color: #404040;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 15px;
+  font-family: "Poppins", sans-serif;
+}
+
+.about-info__info-content {
+  color: #2f3231;
+  font-size: 15px;
+  font-weight: 300;
+  margin: 0;
+  line-height: 26px;
+  font-family: "Roboto", sans-serif;
+}
+
+.about-info__content-images {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 15px;
+
+  .about-info__images {
+    height: 400px;
+
+    &:nth-child(2) {
+      margin-top: 40px;
+    }
+
+    img {
+      height: 100%;
+    }
+  }
 }
