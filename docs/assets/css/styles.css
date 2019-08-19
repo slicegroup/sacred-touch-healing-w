@@ -18,10 +18,8 @@
 
 .btn-banner {
   z-index: 8;
-  bottom: -100px !important;
   left: 5px !important;
   white-space: nowrap;
-  display: flex !important;
   align-items: center !important;
   height: 50px;
 }
@@ -30,11 +28,11 @@
   border-radius: 5px;
 }
 
-.content-img {
+.content-services_img {
   height: 210px !important;
 }
 
-.content-img img {
+.content-services_img img {
   height: 100% !important;
   object-fit: cover;
   width: 100%;
@@ -158,6 +156,12 @@ footer {
   grid-template-columns: 70% 30%;
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+  #contactWrapper {
+    grid-template-columns: 100%;
+  }
+}
+
 #contactWrapper .content-details .contact-info {
   padding: 32px 10px 20px;
   background: #ffffff;
@@ -202,15 +206,31 @@ footer {
   opacity: .8;
 }
 
+.about-parallax .about-parallax__title {
+  position: absolute;
+  bottom: 50px;
+  left: 8.5%;
+}
+
+.about-parallax .about-parallax__title h1 {
+  color: #fff;
+}
+
 .about-info__content-info {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-gap: 10px;
+  grid-gap: 25px;
 }
 
 .about-info__valor {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 100%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .about-info__valor {
+    grid-template-columns: 100%;
+  }
 }
 
 .about-info__subtitle {
@@ -236,6 +256,10 @@ footer {
   grid-gap: 15px;
 }
 
+.about-info__content-images.services-info__content-images {
+  grid-template-columns: 100% !important;
+}
+
 .about-info__content-images .about-info__images {
   height: 400px;
 }
@@ -246,4 +270,153 @@ footer {
 
 .about-info__content-images .about-info__images img {
   height: 100%;
+}
+
+.about-ideabox__content {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 50px 0 10px 0;
+}
+
+.about-ideabox__content .about-ideabox__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-ideabox__content .about-ideabox__item .about-ideabox__box {
+  width: 100px;
+  height: 100px;
+  background: #f7ebf3;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-ideabox__content .about-ideabox__item .about-ideabox__box img {
+  width: 50px !important;
+}
+
+.about-ideabox__content .about-ideabox__item .about-ideabox__title {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.about-ideabox__content .about-ideabox__item .about-ideabox__line {
+  background-color: rgba(0, 0, 0, 0.08);
+  color: rgba(0, 0, 0, 0.08);
+  width: 40%;
+}
+
+.about-ideabox__content .about-ideabox__item .about-ideabox__description {
+  text-align: center;
+}
+
+.main-content {
+  height: 100vh;
+}
+
+.main-content__items {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+.main-content__description {
+  z-index: 9;
+  padding-top: 80px;
+}
+
+.main-content__title {
+  font-family: 'Poppins';
+  z-index: 6 !important;
+  white-space: nowrap;
+  font-size: 60px;
+  line-height: 70px;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: 0px;
+  margin-left: 5px;
+  margin-top: 30px;
+}
+
+.main-content__text {
+  margin-left: 5px;
+  z-index: 7;
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: 300;
+  color: #667d80;
+  letter-spacing: 0px;
+  font-family: 'Roboto';
+  font-size: 17px;
+  margin-top: 20px;
+}
+
+.main-content__img {
+  z-index: 5 !important;
+}
+
+.main-content__img img {
+  width: 840px;
+}
+
+.title-section {
+  padding: 40px 0 70px 0;
+  text-align: center;
+}
+
+.content-services_item {
+  padding: 0 5px;
+  color: #2f3231;
+}
+
+.content-services_item:hover {
+  text-decoration: none;
+  color: #2f3231;
+}
+
+.services-parallax {
+  background-image: url("../img/active-activity-beautiful-2529375.jpg");
+  background-size: cover;
+  height: 70vh;
+  background-attachment: fixed;
+  position: relative;
+  background-position: 50% -140px;
+}
+
+.services-parallax .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, #d291bc 0%, rgba(255, 255, 255, 0) 100%);
+  opacity: .8;
+}
+
+.services-parallax .services-parallax__title {
+  position: absolute;
+  bottom: 50px;
+  left: 8.5%;
+}
+
+.services-parallax .services-parallax__title h1 {
+  color: #fff;
+}
+
+.services-info__images {
+  height: 500px;
+  width: 500px;
+}
+
+.services-info__images img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }

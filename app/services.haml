@@ -61,7 +61,7 @@
                           %a{:href => "#License"}
                             %span License
                         %li
-                          %a{:href => "#Testimonials"}
+                          %a{:href => "testimonials.html"}
                             %span Testimonials
                     %a.responsive-menu-toggle{:href => "#"}
                       %i.fa.fa-bars
@@ -70,19 +70,14 @@
         .content_wrapper.clearfix
           .sections_group
             .entry-content
-              = render ('app/partials/about/_parallax.haml')
+              = render ('app/partials/services/_service-parallax.haml')
             
-              = render ('app/partials/about/_about-info.haml')
-              = render ('app/partials/about/_about-ideabox.haml')
-              %section.about-ideabox
-                .section_wrapper.mcb-section-inner
-                  .about-ideabox__content
-                    .about-ideabox__item
-                    .about-ideabox__item
-                    .about-ideabox__item
+              = render ('app/partials/services/_services-info.haml')
+              = render ('app/partials/services/_services-process.haml')
 
-              = render ('app/partials/index/_license.haml')
-              = render ('app/partials/index/_testimonials.haml')
+
+              -# = render ('app/partials/index/_license.haml')
+              -# = render ('app/partials/index/_testimonials.haml')
               = render ('app/partials/index/_contact.haml')
       = render ('app/partials/index/_footer.haml')
     / side menu

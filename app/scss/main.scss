@@ -26476,14 +26476,14 @@ a.action_button {
     width: 100%;
   }
 
-  &.valign-middle .mcb-wrap-inner {
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
+  // &.valign-middle .mcb-wrap-inner {
+  //   top: 50%;
+  //   -webkit-transform: translateY(-50%);
+  //   -moz-transform: translateY(-50%);
+  //   -ms-transform: translateY(-50%);
+  //   -o-transform: translateY(-50%);
+  //   transform: translateY(-50%);
+  // }
 
   &.valign-bottom .mcb-wrap-inner {
     top: 100%;

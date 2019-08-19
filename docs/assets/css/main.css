@@ -23953,15 +23953,6 @@ a.action_button:hover {
   width: 100%;
 }
 
-.equal-height-wrap .mcb-wrap.valign-middle .mcb-wrap-inner {
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
 .equal-height-wrap .mcb-wrap.valign-bottom .mcb-wrap-inner {
   top: 100%;
   -webkit-transform: translateY(-100%);
