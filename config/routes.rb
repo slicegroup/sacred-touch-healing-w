@@ -1,10 +1,13 @@
 
 Rails.application.routes.draw do
-  localized do
-    get '/index', to: 'app/front#index', as: :app_index
-  end
+  # localized do
+  #   get '/index', to: 'app/front#index', as: :app_index
+  # end
 
-  # root to: 'app/front#index'
+  root to: 'app/front#index'
+  get '/about', to: 'app/front#about', as: :app_about
+  get '/services/:id', to: 'app/front#services', as: :app_services
+  get '/testimonials/:id', to: 'app/front#testimonials', as: :app_testimonials
 
   devise_for :users, skip: KepplerConfiguration.skip_module_devise
 
@@ -199,11 +202,11 @@ Rails.application.routes.draw do
   # Ckeditor routes engine
   mount Ckeditor::Engine => '/ckeditor'
 
-  # Testimonials routes engine
-  mount KepplerTestimonials::Engine, at: '/', as: 'testimonials'
-
   # Services routes engine
   mount KepplerServices::Engine, at: '/', as: 'services'
+
+  # Testimonials routes engine
+  mount KepplerTestimonials::Engine, at: '/', as: 'testimonials'
 
   # Banners routes engine
   mount KepplerBanners::Engine, at: '/', as: 'banners' 

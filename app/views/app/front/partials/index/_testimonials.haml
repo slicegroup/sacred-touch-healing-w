@@ -1,0 +1,27 @@
+#Testimonials.section.mcb-section{:style => "padding-top:100px; padding-bottom:0px; background-image:url(/assets/img/back_1.png); background-repeat:repeat; background-position:center top;"}
+  .section_wrapper.mcb-section-inner
+    .wrap.mcb-wrap.one.valign-top.clearfix
+      .mcb-wrap-inner
+        .column.mcb-column.one.column_column
+          .column_attr.clearfix.align_center
+            %h4.themecolor{:style => "margin-bottom: 6px"} Testimonials
+            %h2 Listen to what my clients say
+        .column.mcb-column.one.column_testimonials
+          .testimonials_slider.single-photo
+            %ul.testimonials_slider_ul
+              - @testimonies.each do |testimony|
+                %li
+                  %a{:href => "testimonials.haml"}
+                    .single-photo-img
+                      %img.scale-with-grid.wp-post-image{:src => "#{testimony.photo}"}/
+                    .bq_wrapper
+                      %blockquote.description-testimonials{:style =>"font-family: 'Roboto';font-size: 15px;"}
+                        = raw testimony.testimony
+                    .hr_dots
+                      %span
+                      %span
+                      %span
+                    .author
+                      %h5{:style =>"font-size: 15px;"}= testimony.name + ", " + testimony.age.to_s + " years"
+                      %span.company
+            .slider_pager.slider_pagination

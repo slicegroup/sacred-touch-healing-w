@@ -20,9 +20,14 @@
               %tbody
                 .form-padding
                   .col-xs-12
+                    = f.input :photo, as: :keppler_file, max_size: 225
+                    %p gregar imagenes con dimensiones: 85x65 / peso maximo recomendado: 225kb
+                  .col-xs-12
                     = f.input :name, as: :string
                   .col-xs-12
                     = f.input :testimony, as: :ckeditor, input_html: { ckeditor: { toolbar: 'mini' } }, label: "Testimonio"
+                  .col-xs-12
+                    = f.input :age, as: :integer
                   .col-xs-12
                     .pull-right
                       = f.button :submit, t('keppler.actions.save'), name: '_save', class: 'btn-primary'

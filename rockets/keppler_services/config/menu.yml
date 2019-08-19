@@ -1,6 +1,6 @@
 menu:
   keppler_services:
-    name: Servicios
+    name: Services
     current: ['/admin/services/services']
     url_path: /admin/services/services
     icon: rocket
