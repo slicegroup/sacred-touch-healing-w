@@ -14,11 +14,11 @@ module App
     end
 
     def services
-      @services = KepplerServices::Service.all
+      @services = KepplerServices::Service.find(params[:id])
     end
 
     def testimonials
-      @testimonies = KepplerTestimonials::Testimony.all
+      @testimonies = KepplerTestimonials::Testimony.find(params[:id])
     end
 
 

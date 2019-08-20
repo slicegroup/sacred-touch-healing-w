@@ -11,14 +11,13 @@
             %ul.testimonials_slider_ul
               %li
                 .single-photo-img
-                  %img.scale-with-grid.wp-post-image{:src => "assets/img/attractive-beautiful-beauty-1878480.jpg"}/
+                  %img.scale-with-grid.wp-post-image{:src => "#{@testimonies.photo}"}/
                 .author
-                  %h5{:style =>"font-size: 15px;"} Carolina Vargas, 25 years
+                  %h5{:style =>"font-size: 15px;"}= @testimonies.name + ", " + @testimonies.age.to_s + " years"
                   %span.company
                 -# .bq_wrapper
                 %blockquote.description-testimonials{:style =>"font-family: 'Roboto';font-size: 15px;"}
-                  Pellentesque tincidunt lorem. Integer nibh lacus, congue eu, fringilla vel, velit. Donec auctor auctor nibh, imperdiet felis, eleifend tincidunt, tortor justo nibh, dictum orci. Vestibulum ante sodales eros. In mollis, turpis non sem vestibulum ipsum.
-                  Aenean lobortis sed, pretium bibendum.
-                .description-testimonials{:style =>"font-family: 'Roboto';font-size: 15px;"}
-                  Enim nulla aliquet porttitor lacus luctus. Tincidunt dui ut ornare lectus. Nulla porttitor massa id neque aliquam vestibulum morbi blandit. Sit amet aliquam id diam maecenas ultricies mi eget mauris. Nisl purus in mollis nunc sed id semper. Hendrerit gravida rutrum quisque non tellus orci ac auctor augue. Malesuada fames ac turpis egestas sed tempus urna et pharetra. Montes nascetur ridiculus mus mauris. Morbi leo urna molestie at. In fermentum et sollicitudin ac orci.
-                  Pellentesque tincidunt lorem. Integer nibh lacus, congue eu, fringilla vel, velit. Donec auctor auctor nibh, imperdiet felis, eleifend tincidunt, tortor justo nibh, dictum orci. Vestibulum ante sodales eros. In mollis, turpis non sem vestibulum ipsum.
+                  =  raw @testimonies.testimony
+                -# .description-testimonials{:style =>"font-family: 'Roboto';font-size: 15px;"}
+                -#   Enim nulla aliquet porttitor lacus luctus. Tincidunt dui ut ornare lectus. Nulla porttitor massa id neque aliquam vestibulum morbi blandit. Sit amet aliquam id diam maecenas ultricies mi eget mauris. Nisl purus in mollis nunc sed id semper. Hendrerit gravida rutrum quisque non tellus orci ac auctor augue. Malesuada fames ac turpis egestas sed tempus urna et pharetra. Montes nascetur ridiculus mus mauris. Morbi leo urna molestie at. In fermentum et sollicitudin ac orci.
+                -#   Pellentesque tincidunt lorem. Integer nibh lacus, congue eu, fringilla vel, velit. Donec auctor auctor nibh, imperdiet felis, eleifend tincidunt, tortor justo nibh, dictum orci. Vestibulum ante sodales eros. In mollis, turpis non sem vestibulum ipsum.
