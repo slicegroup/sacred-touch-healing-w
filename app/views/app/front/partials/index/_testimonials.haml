@@ -11,7 +11,7 @@
             %ul.testimonials_slider_ul
               - @testimonies.each do |testimony|
                 %li
-                  %a{:href => "testimonials.haml"}
+                  = link_to app_testimonials_path(testimony.id) do
                     .single-photo-img
                       %img.scale-with-grid.wp-post-image{:src => "#{testimony.photo}"}/
                     .bq_wrapper

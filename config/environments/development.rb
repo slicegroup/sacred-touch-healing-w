@@ -46,8 +46,8 @@ Rails.application.configure do
     port: 587,
     domain: Rails.application.secrets.domain,
     enable_starttls_auto: true,
-    user_name: 'pruebajose98617@gmail.com',
-    password: 'jonorebra98617'
+    user_name: Rails.application.secrets.email,
+    password: Rails.application.secrets.password
   }
   # ActionMailer Config
   # Send email in development mode?
