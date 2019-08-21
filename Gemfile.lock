@@ -18,6 +18,17 @@ PATH
       simple_form
 
 PATH
+  remote: rockets/keppler_contact_us
+  specs:
+    keppler_contact_us (0.1.0)
+      haml_rails
+      jquery-validation-rails
+      pundit
+      rails (= 5.2.0)
+      recaptcha
+      simple_form
+
+PATH
   remote: rockets/keppler_frontend
   specs:
     keppler_frontend (0.1.0)
@@ -306,10 +317,12 @@ GEM
       turbolinks
     jquery-ui-rails (6.0.1)
       railties (>= 3.2.16)
+    jquery-validation-rails (1.16.0)
     jshint (1.5.0)
       execjs (>= 1.4.0)
       multi_json (~> 1.0)
       therubyracer (~> 0.12.1)
+    json (2.1.0)
     jwt (2.1.0)
     kaminari (1.1.1)
       activesupport (>= 4.1.0)
@@ -436,6 +449,8 @@ GEM
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
     rdoc (6.0.4)
+    recaptcha (4.13.0)
+      json
     reek (4.8.2)
       codeclimate-engine-rb (~> 0.4.0)
       parser (>= 2.5.0.0, < 2.6)
@@ -627,6 +642,7 @@ DEPENDENCIES
   kaminari-i18n (= 0.5.0)
   keppler_banners!
   keppler_capsules!
+  keppler_contact_us!
   keppler_frontend!
   keppler_ga_dashboard!
   keppler_languages!

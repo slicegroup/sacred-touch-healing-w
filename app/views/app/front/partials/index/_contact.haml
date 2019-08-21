@@ -8,19 +8,20 @@
             %h2 Resquest for consultation
             %hr.no_line{:style => "margin: 0 auto 20px"}/
             #contactWrapper
-              %form#contactform
+              = simple_form_for @message, url: app_new_message_path do |f|
                 / One Second (1/2) Column
                 .column.one-second
-                  %input#name{"aria-invalid" => "false", "aria-required" => "true", :name => "name", :placeholder => "Your name", :size => "40", :type => "text"}/
+                  %input#name{"aria-invalid" => "false", "aria-required" => "true", :name => "message[name]", :placeholder => "Your name", :size => "40", :type => "text"}/
                 / One Second (1/2) Column
                 .column.one-second
-                  %input#email{"aria-invalid" => "false", "aria-required" => "true", :name => "email", :placeholder => "Your e-mail", :size => "40", :type => "email"}/
+                  %input#email{"aria-invalid" => "false", "aria-required" => "true", :name => "message[to_emails]", :placeholder => "Your e-mail", :size => "40", :type => "email"}/
                 .column.one
-                  %input#subject{"aria-invalid" => "false", :name => "subject", :placeholder => "Subject", :size => "40", :type => "text"}/
+                  %input#subject{"aria-invalid" => "false", :name => "message[subject]", :placeholder => "Subject", :size => "40", :type => "text"}/
                 .column.one
-                  %textarea#body{"aria-invalid" => "false", :name => "body", :placeholder => "Message", :rows => "10", :style => "width:100%;"}
+                  %textarea#body{"aria-invalid" => "false", :name => "message[content]", :placeholder => "Message", :rows => "10", :style => "width:100%;"}
                 .column.one
-                  %input#submit{:onclick => "return check_values()", :type => "button", :value => "Send A Message"}/
+                  = f.button :submit, "Send A Message", class: "submit"
+                  -# %input#submit{:onclick => "return check_values()", :type => "button", :value => "Send A Message"}/
               .content-details
                 .contact-info
                   %h4.themecolor{:style => "margin-bottom: 6px"} Contact Details

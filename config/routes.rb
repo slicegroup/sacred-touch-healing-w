@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get '/about', to: 'app/front#about', as: :app_about
   get '/services/:id', to: 'app/front#services', as: :app_services
   get '/testimonials/:id', to: 'app/front#testimonials', as: :app_testimonials
+  get '/send_message', to: 'app/front#send_message', as: :app_send_message
+  post '/new_message', to: 'app/front#new_message', as: :app_new_message
 
   devise_for :users, skip: KepplerConfiguration.skip_module_devise
 
@@ -201,6 +203,9 @@ Rails.application.routes.draw do
 
   # Ckeditor routes engine
   mount Ckeditor::Engine => '/ckeditor'
+
+  # KepplerContactUs routes engine
+  mount KepplerContactUs::Engine, at: '/', as: 'keppler_contact_us'
 
   # Services routes engine
   mount KepplerServices::Engine, at: '/', as: 'services'
