@@ -1,0 +1,16 @@
+menu:
+  keppler_testimonials:
+    name: Testimonios
+    current: ['/admin/testimonials/testimonies']
+    url_path: /admin/testimonials/testimonies
+    icon: rocket
+    model: KepplerTestimonials::Testimony
+    environment: all
+    position: 4 
+
+      # - new:
+      #     name: + Add new module
+      #     url_path: /url_path
+      #     current: ['/current_path']
+      #     enviroment: development
+      #     model: User

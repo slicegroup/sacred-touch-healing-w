@@ -1,0 +1,31 @@
+#Top_bar
+  .container
+    .column.one
+      .logo
+        %a#logo{"data-height" => "60", "data-padding" => "15", :href => "index.html", :title => "", :style => "margin-left: -25px;"}
+          .content-logo{:style =>"width: 150px;margin-left: 5px;"}
+            %img.logo-main.scale-with-grid{ :style => "width: 100% !important; margin-top: -35px;", :alt => "dietitian2", "data-height" => "50", "data-retina" => "assets/img/logo.png", :src => "assets/img/logo.png"}/
+          %img.logo-sticky.scale-with-grid{ :style => "margin-left: -25px;", :alt => "dietitian2", "data-height" => "50", "data-retina" => "images/retina-dietitian2.png", :src => "assets/img/logo-horizontal.png"}/
+          %img.logo-mobile.scale-with-grid{:alt => "dietitian2", "data-height" => "50", "data-retina" => "assets/img/logo.png", :src => "assets/img/logo.png"}/
+          %img.logo-mobile-sticky.scale-with-grid{:alt => "dietitian2", "data-height" => "50", "data-retina" => "assets/img/logo-horizontal.png", :src => "assets/img/logo-horizontal.png"}/
+      .menu_wrapper
+        %nav#menu
+          %ul#menu-main-menu.menu.menu-main
+            %li
+              %a{:href => "#Header_wrapper"}
+                %span Home
+            %li
+              %a{:href => "#About"}
+                %span About me
+            %li
+              %a{:href => "#Services"}
+                %span Services
+
+            %li
+              %a{:href => "#License"}
+                %span License
+            %li
+              %a{:href => "#Testimonials"}
+                %span Testimonials
+        %a.responsive-menu-toggle{:href => "#"}
+          %i.fa.fa-bars

@@ -1,0 +1,16 @@
+menu:
+  keppler_banners:
+    name: Banners
+    current: ['/admin/banners/banners']
+    url_path: /admin/banners/banners
+    icon: image
+    model: KepplerBanners::Banner
+    environment: all
+    position: 4
+
+      # - new:
+      #     name: + Add new module
+      #     url_path: /url_path
+      #     current: ['/current_path']
+      #     enviroment: development
+      #     model: User

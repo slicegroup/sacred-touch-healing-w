@@ -1,0 +1,21 @@
+%section.about-info{style: "position:relative;"}
+  .section_wrapper.mcb-section-inner
+    .about-info__content-info
+      .about-info__item
+        .about-info__content
+          -# %h4.themecolor{:style => "margin-bottom: 6px"} Some story behind us
+          %h2 
+            = @services.title
+                        
+          %p.description-about{:style =>"font-weight: 300;font-family: 'Roboto';font-size: 15px;"}
+            = raw @services.description 
+          -# %p.description-about{:style =>"font-weight: 300;font-family: 'Roboto';font-size: 15px;"}
+            
+
+      .services-info__item
+        .services-info__content-images
+          .services-info__images
+            %img.img-banner{:src => "#{@services.image}"}/
+
+  .content-img-float
+    %img.scale-with-grid{:src => "/assets/img/logo-circulo.png"}/

@@ -1,0 +1,22 @@
+es:
+  keppler:
+    sidebar-menu:
+      keppler-services: Keppler services
+      keppler-services-submenu:
+        service: Service
+    permissions:
+    models:
+      singularize:
+        service: service
+      pluralize:
+        services: services
+    modules:
+      admin/service: Service
+    messages:
+    actions:
+  activerecord:
+    attributes:
+    errors:
+      messages:
+  errors:
+  helpers:
