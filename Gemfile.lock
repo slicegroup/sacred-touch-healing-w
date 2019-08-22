@@ -648,7 +648,7 @@ DEPENDENCIES
   keppler_languages!
   keppler_services!
   keppler_testimonials!
-  loofah (>= 2.2.3)
+  loofah (~> 2.2)
   mini_magick (= 4.8.0)
   nprogress-rails (= 0.2.0.2)
   paranoia (= 2.4.1)
