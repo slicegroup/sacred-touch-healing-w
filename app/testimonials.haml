@@ -1,0 +1,98 @@
+:ruby
+  def render(partial)
+    Haml::Engine.new(File.read(partial)).render
+  end
+!!!
+%html.no-js
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "utf-8"}/
+    %title Sacred Touch Healing
+    %meta{:content => "", :name => "description"}/
+    %meta{:content => "", :name => "author"}/
+    / Mobile Specific Metas
+    %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1", :name => "viewport"}/
+    / Favicons
+    %link{:href => "assets/img/favicon.ico", :rel => "shortcut icon"}/
+    / FONTS
+    %link{:href => "http://fonts.googleapis.com/css?family=Roboto:100,300,400,400italic,700", :rel => "stylesheet"}/
+    %link{:href => "http://fonts.googleapis.com/css?family=Patua+One:100,300,400,400italic,700", :rel => "stylesheet"}/
+    / CSS
+    %link{:href => "assets/css/main.css", :rel => "stylesheet"}/
+    %link{:href => "assets/css/styles.css", :rel => "stylesheet"}/
+    %link{:href => "assets/css/structure.css", :rel => "stylesheet"}/
+    %link{:href => "assets/css/dietitian2.css", :rel => "stylesheet"}/
+    %link{:href => "assets/css/font-awesome.css", :rel => "stylesheet"}/
+    %link{:href => "assets/css/slick.css", :rel => "stylesheet"}/
+    %link{:href => "assets/css/slick-theme.css", :rel => "stylesheet"}/
+
+    / Revolution Slider
+    %link{:href => "assets/css/settings.css", :rel => "stylesheet"}/
+  %body.color-custom.style-default.button-default.layout-full-width.one-page.no-content-padding.header-classic.minimalist-header-no.sticky-header.sticky-tb-color.ab-hide.subheader-both-center.menu-link-color.menuo-right.menuo-no-borders.footer-copy-center.mobile-tb-hide.mobile-side-slide.mobile-mini-mr-ll.tablet-sticky.mobile-header-mini.mobile-sticky.be-reg-20881
+    #Wrapper
+      #Header_wrapper
+        %header#Header
+          .header_placeholder
+          #Top_bar
+            .container
+              .column.one
+                .top_bar_left.clearfix
+                  .logo
+                    %a#logo{"data-height" => "60", "data-padding" => "15", :href => "index.html", :title => "", :style => "margin-left: -25px;"}
+                      .content-logo{:style =>"width: 150px;margin-left: 5px;"}
+                        %img.logo-main.scale-with-grid{ :style => "width: 100% !important; margin-top: -35px;", :alt => "dietitian2", "data-height" => "50", "data-retina" => "assets/img/logo.png", :src => "assets/img/logo.png"}/
+                      %img.logo-sticky.scale-with-grid{ :style => "margin-left: -25px;", :alt => "dietitian2", "data-height" => "50", "data-retina" => "images/retina-dietitian2.png", :src => "assets/img/logo-horizontal.png"}/
+                      %img.logo-mobile.scale-with-grid{:alt => "dietitian2", "data-height" => "50", "data-retina" => "assets/img/logo.png", :src => "assets/img/logo.png"}/
+                      %img.logo-mobile-sticky.scale-with-grid{:alt => "dietitian2", "data-height" => "50", "data-retina" => "assets/img/logo-horizontal.png", :src => "assets/img/logo-horizontal.png"}/
+                  .menu_wrapper
+                    %nav#menu
+                      %ul#menu-main-menu.menu.menu-main
+                        %li
+                          %a{:href => "index.html"}
+                            %span Home
+                        %li
+                          %a{:href => "#About"}
+                            %span About me
+                        %li
+                          %a{:href => "services.html"}
+                            %span Services
+
+                        %li
+                          %a{:href => "#License"}
+                            %span License
+                        %li
+                          %a{:href => "testimonials.html"}
+                            %span Testimonials
+                    %a.responsive-menu-toggle{:href => "#"}
+                      %i.fa.fa-bars
+
+      #Content
+        .content_wrapper.clearfix
+          .sections_group
+            .entry-content
+
+            
+              = render ('app/partials/testimonials/_testimonials-info.haml')
+              -# = render ('app/partials/about/_about-ideabox.haml')
+
+              = render ('app/partials/index/_contact.haml')
+      = render ('app/partials/index/_footer.haml')
+    / side menu
+    #Side_slide.right.dark{"data-width" => "250"}
+      .close-wrapper
+        %a.close{:href => "#"}
+          %i.fa.fa-close
+      .extras
+
+        .extras-wrapper
+      .menu_wrapper
+    #body_overlay
+    / JS
+    %script{:src => "assets/js/jquery-2.1.4.min.js"}
+    %script{:src => "assets/js/jquery.plugins.js"}
+    %script{:src => "assets/js/translate3d.js"}
+    %script{:src => "assets/js/scripts.js"}
+    %script{:src => "assets/js/slick.js"}
+    %script{:src => "assets/js/fonts.js"}
+    %script{:src => "assets/js/setting-slick.js"}
+    %script{:src => "https://snapwidget.com/js/snapwidget.js"}
