@@ -8,7 +8,9 @@
               .image_wrapper{ :style => "display: flex;align-items: flex-end;height: 130px;"}
                 %img.scale-with-grid{:src => "assets/img/logo-footer.png", :style => "width: 70px;"}/
       .column.one-third
-        %aside.widget_text.widget.widget_custom_html
+        %aside.widget_text.widget.widget_custom_html.footer_widget
+          %a#back_to_top.button.button_js{:href => ""}
+            %i.fa.fa-chevron-up
           .textwidget.custom-html-widget.content-text-footer
             %h5{:style => "text-align: center"}
               %span.themecolor Sacred Touch Healing 
@@ -30,8 +32,7 @@
   .footer_copy
     .container
       .column.one
-        %a#back_to_top.button.button_js{:href => ""}
-          %i.fa.fa-chevron-up
+        
         .copyright
           © 2019 Sacred Touch Healing  - by
           %a{:href => "https://slicegroup.co/", :rel => "nofollow", :target => "_blank", :style => "font-size: 15px;"}
