@@ -20,6 +20,7 @@
                 .column.one
                   %textarea#body{"aria-invalid" => "false", :name => "message[content]", :placeholder => "Message", :rows => "10", :style => "width:100%;"}
                 .column.one
+                  .g-recaptcha{"data-sitekey" => "6Lc8crQUAAAAAISxwXXI52LcgDtA5plGv_SYkkSD"}
                   = f.button :submit, "Send A Message", class: "submit"
                   -# %input#submit{:onclick => "return check_values()", :type => "button", :value => "Send A Message"}/
               .content-details
