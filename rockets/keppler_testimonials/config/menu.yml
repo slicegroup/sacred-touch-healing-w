@@ -1,6 +1,6 @@
 menu:
   keppler_testimonials:
-    name: Testimonios
+    name: Testimonials
     current: ['/admin/testimonials/testimonies']
     url_path: /admin/testimonials/testimonies
     icon: rocket
