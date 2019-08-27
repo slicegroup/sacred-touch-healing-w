@@ -1,0 +1,28 @@
+.btn {
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  font-family: "Roboto", sans-serif !important;
+  background-color: rgb(180, 32, 75);
+  border-color: rgba(0, 0, 0, 1);
+  border-radius: 5px 5px 5px 5px;
+  outline: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  cursor: pointer;
+  text-decoration: none !important;
+  padding: 12px 35px;
+}
+
+
+.btn-banner {
+  z-index: 8;
+  // bottom: -100px !important;
+  left: 5px !important;
+  white-space: nowrap;
+  // display: flex !important;
+  align-items: center !important;
+  height: 50px;
+}
