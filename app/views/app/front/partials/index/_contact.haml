@@ -18,11 +18,11 @@
                 .column.one
                   %input#subject{"aria-invalid" => "false", :name => "message[subject]", :placeholder => "Subject", :size => "40", :type => "text"}/
                 .column.one
-                  %textarea#body{"aria-invalid" => "false", :name => "message[content]", :placeholder => "Message", :rows => "10", :style => "width:100%;"}
-                .column.one
+                  %textarea#body{"aria-invalid" => "false", :name => "message[content]", :placeholder => "Message", :rows => "5", :style => "width:100%;"}
+                .column.one.buttons
                   .g-recaptcha{"data-sitekey" => "6Lc8crQUAAAAAISxwXXI52LcgDtA5plGv_SYkkSD"}
                   = f.button :submit, "Send A Message", class: "submit"
-                  -# %input#submit{:onclick => "return check_values()", :type => "button", :value => "Send A Message"}/
+                 
               .content-details
                 .contact-info
                   %h4.themecolor{:style => "margin-bottom: 6px"} Contact Details
@@ -33,8 +33,7 @@
                       .text-holder
                         %p
                           Address: Houston, Tx. United States
-                          -# %br>/
-                          -# Str, New York, NY 10012, USA
+                          
                     %li
                       .icon-holder
                         %i.fa.fa-phone

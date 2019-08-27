@@ -1,15 +1,36 @@
+%meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+%meta{:charset => "utf-8"}/
+%title Sacred Touch Healing
+%meta{:content => "", :name => "description"}/
+%meta{:content => "", :name => "author"}/
+/ Mobile Specific Metas
+%meta{:content => "width=device-width, initial-scale=1, maximum-scale=1", :name => "viewport"}/
+/ Favicons
+%link{:href => "/assets/img/favicon.ico", :rel => "shortcut icon"}/
+
+/ CSS
+%link{:href => "/assets/css/bootstrap.min.css", :rel => "stylesheet"}/
+%link{:href => "/assets/css/main.css", :rel => "stylesheet"}/
+%link{:href => "/assets/css/styles.css", :rel => "stylesheet"}/
+%link{:href => "/assets/css/structure.css", :rel => "stylesheet"}/
+%link{:href => "/assets/css/dietitian2.css", :rel => "stylesheet"}/
+%link{:href => "/assets/css/font-awesome.css", :rel => "stylesheet"}/
+%link{:href => "/assets/css/slick.css", :rel => "stylesheet"}/
+%link{:href => "/assets/css/slick-theme.css", :rel => "stylesheet"}/
+%link{:href => "/assets/css/settings.css", :rel => "stylesheet"}/
+
 // Title & Meta tags
 = render 'app/layouts/meta_tags'
 
-// Stylesheets
-= stylesheet_link_tag 'app/application', media: 'all', 'data-turbolinks-track': 'reload'
-= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Patua+One', 'data-turbolinks-track': 'reload'
-= stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css', 'data-turbolinks-track': 'reload'
+-# // Stylesheets
+-# = stylesheet_link_tag 'app/application', media: 'all', 'data-turbolinks-track': 'reload'
+-# = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Patua+One', 'data-turbolinks-track': 'reload'
+-# = stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css', 'data-turbolinks-track': 'reload'
 
-// Javascripts
-= javascript_include_tag 'app/application', 'data-turbolinks-track': 'reload'
-= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js', 'data-turbolinks-track': 'reload'
+-# // Javascripts
+-# = javascript_include_tag 'app/application', 'data-turbolinks-track': 'reload'
+-# = javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js', 'data-turbolinks-track': 'reload'
 
-// Google Analytics
-= render 'app/layouts/google_analytics'
-= render 'admin/layouts/git_info', git: @git
+-# // Google Analytics
+-# = render 'app/layouts/google_analytics'
+-# = render 'admin/layouts/git_info', git: @git
