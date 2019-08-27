@@ -9,24 +9,26 @@
         .container
           %a.navbar-brand{:href => "#"} 
             %img#iso.logo-main.scale-with-grid{:alt => "sacred touch healing", "data-height" => "50", "data-retina" => "assets/img/logo.png", :src => "assets/img/logo.png"}/
-          %button.navbar-toggler.p-2.border-0.hamburger.hamburger--elastic{"data-toggle" => "offcanvas", :type => "button"}
+          %button.ml-auto.navbar-toggler.p-2.border-0.hamburger.hamburger--elastic.d-none-lg{"data-toggle" => "offcanvas", :type => "button"}
             %span.hamburger-box
               %span.hamburger-inner
-          #navbarSupportedContent.collapse.navbar-collapse
-            %ul.navbar-nav.ml-auto
-              %li.nav-item.active
-                %a.nav-link{:href => "#"}
-                  Home
-              %li.nav-item
-                %a.nav-link{:href => "#"} About me 
-              %li.nav-item
-                %a.nav-link{:href => "#"} Services
-              %li.nav-item
-                %a.nav-link{:href => "#"} License 
+          .content-offcanvas
+            .offcanvas-collapse.fil#navbarNav
+              %ul.navbar-nav.ml-auto
+                %li.nav-item.active
+                  %a.nav-link{:href => "#"}
+                    Home
+                %li.nav-item
+                  %a.nav-link{:href => "#"} About me 
+                %li.nav-item
+                  %a.nav-link{:href => "#"} Services
+                %li.nav-item
+                  %a.nav-link{:href => "#"} License 
+      
+                %li.nav-item
+                  %a.nav-link{ :href => "#"} Testimonials
     
-              %li.nav-item
-                %a.nav-link{ :href => "#"} Testimonials
-    
+              
 
       %section.banner
         .section_wrapper.mcb-section-inner
@@ -88,5 +90,18 @@
           $('.navbar-fixed-js').removeClass('fixed');
           $("#iso").removeClass('img-size').attr('src', 'assets/img/logo.png').removeClass('scroll-up');
 
+        }
+      });
+      $(function () {
+        $('[data-toggle="offcanvas"]').on('click', function () {
+          $('.offcanvas-collapse').toggleClass('open');
+          $('body').toggleClasss('offcanvas-expanded');
+        })
+      })
+      let navLanguage = $('.nav-language').find('a.language')
+      $('.language').click(function () {
+        var $this = $(this);
+        if (navLanguage.hasClass('active')) {
+          navLanguage.toggleClass('active');
         }
       });

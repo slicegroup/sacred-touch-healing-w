@@ -12,6 +12,9 @@
             .content-services_img.content-img
               %img{:src => "#{service.index}"}/
             .content-services__content.content-column-services{"data-anim-type" => "fadeInUp", :style => "background-color:rgba(239, 66, 111, 0.26);"}
+              .nav-language
+                %a.active.language-link.language{:href => "#"} ESP
+                %a.language{:href => "#"} ENG
               .content-services__title
                 %h5{:style => "text-align: center"}
                   = service.title
