@@ -9,8 +9,9 @@
         .container
           %a.navbar-brand{:href => "#"} 
             %img#iso.logo-main.scale-with-grid{:alt => "sacred touch healing", "data-height" => "50", "data-retina" => "assets/img/logo.png", :src => "assets/img/logo.png"}/
-          %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
-            %span.navbar-toggler-icon
+          %button.navbar-toggler.p-2.border-0.hamburger.hamburger--elastic{"data-toggle" => "offcanvas", :type => "button"}
+            %span.hamburger-box
+              %span.hamburger-inner
           #navbarSupportedContent.collapse.navbar-collapse
             %ul.navbar-nav.ml-auto
               %li.nav-item.active

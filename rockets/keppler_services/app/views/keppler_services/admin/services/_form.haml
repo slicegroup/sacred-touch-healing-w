@@ -21,17 +21,17 @@
                 .form-padding
                   .col-xs-12
                     = f.input :index, as: :keppler_file, max_size: 225
-                    %p gregar imagenes con dimensiones: 390x210 / peso maximo recomendado: 225kb
+                    %p add images with dimensions: 390x210 / maximum recommended weight: 225kb
                   .col-xs-12
                     = f.input :title, as: :string
                   .col-xs-12
                     = f.input :description, as: :ckeditor, input_html: { ckeditor: { toolbar: 'mini' } }
                   .col-xs-12
                     = f.input :banner, as: :keppler_file, max_size: 225
-                    %p gregar imagenes con dimensiones: 1359x445 / peso maximo recomendado: 225kb
+                    %p add images with dimensions: 1359x445 / maximum recommended weight: 225kb 
                   .col-xs-12
                     = f.input :image, as: :keppler_file, max_size: 225
-                    %p gregar imagenes con dimensiones: 500X500 / peso maximo recomendado: 225kb
+                    %p add images with dimensions: 500x500 / maximum recommended weight: 225kb
                   .col-xs-12
                     .pull-right
                       = f.button :submit, t('keppler.actions.save'), name: '_save', class: 'btn-primary'
