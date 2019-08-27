@@ -4,27 +4,29 @@
     = render 'app/layouts/head'
   %body.color-custom.style-default.button-default.layout-full-width.one-page.no-content-padding.header-classic.minimalist-header-no.sticky-header.sticky-tb-color.ab-hide.subheader-both-center.menu-link-color.menuo-right.menuo-no-borders.footer-copy-center.mobile-tb-hide.mobile-side-slide.mobile-mini-mr-ll.tablet-sticky.mobile-header-mini.mobile-sticky.be-reg-20881
     #Wrapper
-      %nav.navbar.navbar-expand-md.fixed-top.navbar-fixed-js
+      %nav.navbar.navbar-expand-lg.fixed-top.navbar-fixed-js#Home
         .container
           %a.navbar-brand{:href => "#"} 
             %img#iso.logo-main.scale-with-grid{:alt => "sacred touch healing", "data-height" => "50", "data-retina" => "/assets/img/logo.png", :src => "/assets/img/logo.png"}/
           %button.ml-auto.navbar-toggler.p-2.border-0.hamburger.hamburger--elastic.d-none-lg{"data-toggle" => "offcanvas", :type => "button"}
             %span.hamburger-box
               %span.hamburger-inner
-          .offcanvas-collapse.fil#navbarNav
-            %ul.navbar-nav.ml-auto
-              %li.nav-item.active
-                %a.nav-link{:href => "#"}
-                  Home
-              %li.nav-item
-                %a.nav-link{:href => "#"} About me 
-              %li.nav-item
-                %a.nav-link{:href => "#"} Services
-              %li.nav-item
-                %a.nav-link{:href => "#"} License 
-    
-              %li.nav-item
-                %a.nav-link{ :href => "#"} Testimonials
+          .content-offcanvas
+            .offcanvas-collapse.fil#navbarNav
+              %ul.navbar-nav.ml-auto
+                %li.nav-item.active
+                  %a.nav-link{:href => "#Home"}
+                    Home
+                %li.nav-item
+                  %a.nav-link{:href => "#About"} About me 
+                %li.nav-item
+                  %a.nav-link{:href => "#Services"} Services
+                %li.nav-item
+                  %a.nav-link{:href => "#License"} License       
+                %li.nav-item
+                  %a.nav-link{ :href => "#Testimonials"} Testimonials
+                %li.nav-item
+                  %a.nav-link{ :href => "#Contact"} Contact
 
       #Content
         .content_wrapper.clearfix
