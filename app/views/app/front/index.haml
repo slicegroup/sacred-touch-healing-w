@@ -5,7 +5,7 @@
 
   %body.color-custom.style-default.button-default.layout-full-width.one-page.no-content-padding.header-classic.minimalist-header-no.sticky-header.sticky-tb-color.ab-hide.subheader-both-center.menu-link-color.menuo-right.menuo-no-borders.footer-copy-center.mobile-tb-hide.mobile-side-slide.mobile-mini-mr-ll.tablet-sticky.mobile-header-mini.mobile-sticky.be-reg-20881
     #Wrapper
-      %nav.navbar.navbar-expand-lg.fixed-top.navbar-fixed-js
+      %nav.navbar.navbar-expand-lg.fixed-top.navbar-fixed-js#Home
         .container
           %a.navbar-brand{:href => "#"} 
             %img#iso.logo-main.scale-with-grid{:alt => "sacred touch healing", "data-height" => "50", "data-retina" => "assets/img/logo.png", :src => "assets/img/logo.png"}/
@@ -16,18 +16,19 @@
             .offcanvas-collapse.fil#navbarNav
               %ul.navbar-nav.ml-auto
                 %li.nav-item.active
-                  %a.nav-link{:href => "#"}
+                  %a.nav-link{:href => "#Home"}
                     Home
                 %li.nav-item
-                  %a.nav-link{:href => "#"} About me 
+                  %a.nav-link{:href => "#About"} About me 
                 %li.nav-item
-                  %a.nav-link{:href => "#"} Services
+                  %a.nav-link{:href => "#Services"} Services
                 %li.nav-item
-                  %a.nav-link{:href => "#"} License 
-      
+                  %a.nav-link{:href => "#License"} License       
                 %li.nav-item
-                  %a.nav-link{ :href => "#"} Testimonials
-    
+                  %a.nav-link{ :href => "#Testimonials"} Testimonials
+                %li.nav-item
+                  %a.nav-link{ :href => "#Contact"} Contact
+              
               
 
       %section.banner
@@ -104,4 +105,28 @@
         if (navLanguage.hasClass('active')) {
           navLanguage.toggleClass('active');
         }
+      });
+      $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 800, function(){
+        
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            });
+          } // End if
+        });
       });
