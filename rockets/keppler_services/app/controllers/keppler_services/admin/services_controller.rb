@@ -94,7 +94,7 @@ module KepplerServices
       # Only allow a trusted parameter "white list" through.
       def service_params
         params.require(:service).permit(
-          :index, :title, :description, :banner, :image
+          :index, :title, :description, :banner, :image, :description_es
         )
       end
     end

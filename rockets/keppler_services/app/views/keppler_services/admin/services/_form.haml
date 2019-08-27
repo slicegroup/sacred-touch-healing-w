@@ -25,7 +25,9 @@
                   .col-xs-12
                     = f.input :title, as: :string
                   .col-xs-12
-                    = f.input :description, as: :ckeditor, input_html: { ckeditor: { toolbar: 'mini' } }
+                    = f.input :description, as: :ckeditor, input_html: { ckeditor: { toolbar: 'mini' } }, label: "Descripción en Inglés"
+                  .col-xs-12
+                    = f.input :description_es, as: :ckeditor, input_html: { ckeditor: { toolbar: 'mini' } }, label: "Descripción en español"
                   .col-xs-12
                     = f.input :banner, as: :keppler_file, max_size: 225
                     %p add images with dimensions: 1359x445 / maximum recommended weight: 225kb 
