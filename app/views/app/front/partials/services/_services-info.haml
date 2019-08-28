@@ -6,12 +6,17 @@
           -# %h4.themecolor{:style => "margin-bottom: 6px"} Some story behind us
           %h2 
             = @services.title
-                        
-          %p.description-about{:style =>"font-weight: 300;font-family: 'Roboto';font-size: 15px;"}
-            = raw @services.description
-          %p.description-about{:style =>"font-weight: 300;font-family: 'Roboto';font-size: 15px;"}
-            = raw @services.description_es 
-          -# %p.description-about{:style =>"font-weight: 300;font-family: 'Roboto';font-size: 15px;"}
+          %div.nav-language
+            %p#show-es ESP
+            %p#show-en ENG
+
+          #en 
+            %p.description-about{:style =>"font-weight: 300;font-family: 'Roboto';font-size: 15px;"}
+              = raw @services.description
+          #es
+            %p.description-about{:style =>"font-weight: 300;font-family: 'Roboto';font-size: 15px;"}
+              = raw @services.description_es 
+            -# %p.description-about{:style =>"font-weight: 300;font-family: 'Roboto';font-size: 15px;"}
             
 
       .services-info__item
@@ -21,3 +26,17 @@
 
   .content-img-float
     %img.scale-with-grid{:src => "/assets/img/logo-circulo.png"}/
+
+:css
+  .hidden { display: none }
+
+:javascript
+  $('#show-es').click(function() {
+    $('#en').hide()
+    $('#es').show()
+  })
+
+  $('#show-en').click(function() {
+    $('#es').hide()
+    $('#en').show()
+  })
