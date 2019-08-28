@@ -33,8 +33,10 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
+}
 
-
+.nav-language.nav-language__show {
+  justify-content: flex-start !important;
 }
 
 .language {

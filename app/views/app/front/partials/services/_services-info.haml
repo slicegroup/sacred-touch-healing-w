@@ -4,11 +4,11 @@
       .about-info__item
         .about-info__content
           -# %h4.themecolor{:style => "margin-bottom: 6px"} Some story behind us
+          %div.nav-language.nav-language__show
+            %p.language.language-link.active#show-es ESP
+            %p.language#show-en ENG
           %h2 
             = @services.title
-          %div.nav-language
-            %p#show-es ESP
-            %p#show-en ENG
 
           #en 
             %p.description-about{:style =>"font-weight: 300;font-family: 'Roboto';font-size: 15px;"}

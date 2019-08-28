@@ -13,8 +13,8 @@
               %img{:src => "#{service.index}"}/
             .content-services__content.content-column-services{"data-anim-type" => "fadeInUp", :style => "background-color:rgba(239, 66, 111, 0.26);"}
               .nav-language
-                %p#show-es ESP
-                %p#show-en ENG
+                %p.language.language-link.active#show-es ESP
+                %p.language#show-en ENG
               .content-services__title
                 %h5{:style => "text-align: center"}
                   = service.title
@@ -26,7 +26,7 @@
                   = raw service.description.truncate(200)
               #es.hidden
                 .content-services_description{:style =>"font-weight: 300;font-family: 'Poppins';font-size: 15px;"}
-                  = raw service.description_es.truncate(200)
+                  // = raw service.description_es.truncate(200)
               
 :css
   .hidden { display: none }
@@ -41,43 +41,3 @@
     $('#es').hide()
     $('#en').show()
   })
-
-// #Services.section.mcb-section{:style => "padding-top:80px; padding-bottom:40px"}
-//   .column.mcb-column.one.column_divider
-//     %hr.no_line{:style => "margin: 0 auto 80px"}/
-//   .section_wrapper.mcb-section-inner
-//     .wrap.mcb-wrap.one.valign-top.clearfix
-//       .mcb-wrap-inner
-//         .column.mcb-column.one.column_column
-//           .column_attr.clearfix.align_center
-//             %h4.themecolor{:style => "margin-bottom: 6px"} Our services
-//             %h2 know more about our services
-//         .column.mcb-column.one.column_divider
-//           %hr.no_line{:style => "margin: 0 auto 80px"}/
-//     .content-services
-//       .wrap.mcb-wrap.one-third.valign-top.clearfix{:style => "padding:0 1%"}
-//         .mcb-wrap-inner
-//           .content-img
-//             %img{:src => "https://www.torqueayurveda.com/wp-content/uploads/2019/04/eab1f3_d8d9559b21ff48c2b2b72923408d20fc_mv2.jpg"}/
-//           .mcb-column.one.column_column
-//             .column_attr.clearfix.animate.content-column-services{"data-anim-type" => "fadeInUp", :style => "background-color:rgba(239, 66, 111, 0.26);"}
-              
-
-              
-
-//       .wrap.mcb-wrap.one-third.valign-top.clearfix{:style => "padding:0 1%"}
-//         .mcb-wrap-inner
-//           .column.mcb-column.one.column_column
-//             .content-img
-//               %img{:src => "assets/img/limpieza.jpg"}/
-//             .column_attr.clearfix.animate.content-column-services{"data-anim-type" => "fadeInUp", :style => "background-color: rgba(89, 49, 95, 0.12);"}
-    
-//       .wrap.mcb-wrap.one-third.valign-top.clearfix{:style => "padding:0 1%"}
-//         .mcb-wrap-inner
-//           .column.mcb-column.one.column_column
-//             .content-img
-//               %img{:src => "assets/img/manos2.webp"}/
-//             .column_attr.clearfix.animate.content-column-services{"data-anim-type" => "fadeInUp", :style => "background-color:rgba(248, 163, 188, 0.23);"}               
-            
-
-    
