@@ -13,18 +13,34 @@
               %img{:src => "#{service.index}"}/
             .content-services__content.content-column-services{"data-anim-type" => "fadeInUp", :style => "background-color:rgba(239, 66, 111, 0.26);"}
               .nav-language
-                %p.active.language-link.language{:href => "#"} ESP
-                %p.language{:href => "#"} ENG
+                %p#show-es ESP
+                %p#show-en ENG
               .content-services__title
                 %h5{:style => "text-align: center"}
                   = service.title
               .content-services_line
                 %div{:style => "width: 80px; height: 5px; background: #ef426f; border-radius: 3px; margin: 0 auto"}
                 %hr.no_line{:style => "margin: 0 auto 15px"}/
-              %p.content-services_description{:style =>"font-weight: 300;font-family: 'Poppins';font-size: 15px;"}
-                = raw service.description.truncate(200)
-              %p.content-services_description{:style =>"font-weight: 300;font-family: 'Poppins';font-size: 15px;"}
-                = raw service.description.truncate(100)
+              #en
+                .content-services_description{:style =>"font-weight: 300;font-family: 'Poppins';font-size: 15px;"}
+                  = raw service.description.truncate(200)
+              #es.hidden
+                .content-services_description{:style =>"font-weight: 300;font-family: 'Poppins';font-size: 15px;"}
+                  = raw service.description_es.truncate(200)
+              
+:css
+  .hidden { display: none }
+
+:javascript
+  $('#show-es').click(function() {
+    $('#en').hide()
+    $('#es').show()
+  })
+
+  $('#show-en').click(function() {
+    $('#es').hide()
+    $('#en').show()
+  })
 
 // #Services.section.mcb-section{:style => "padding-top:80px; padding-bottom:40px"}
 //   .column.mcb-column.one.column_divider

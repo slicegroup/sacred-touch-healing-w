@@ -58,7 +58,7 @@
           .sections_group
             .entry-content
               = render 'app/front/partials/index/about.haml'
-            
+              %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"}
               = render 'app/front/partials/index/services.haml'
               = render 'app/front/partials/index/license.haml'
               = render 'app/front/partials/index/testimonials.haml'
@@ -75,7 +75,7 @@
     %script{:src => "/assets/js/jquery.plugins.js"}
     %script{:src => "/assets/js/translate3d.js"}
     -# %script{:src => "/assets/js/scripts.js"}
-    %script{:src => "/assets/js/slick.js"}
+    %script{:src => "/assets/js/slick.min.js"}
     %script{:src => "/assets/js/fonts.js"}
     %script{:src => "/assets/js/mfn.menu.js"}
     %script{:src => "/assets/js/setting-slick.js"}
