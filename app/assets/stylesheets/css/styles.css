@@ -253,6 +253,11 @@
   height: 50px;
 }
 
+.btn-banner i {
+  display: flex;
+  margin-top: 5px;
+}
+
 .img-banner {
   border-radius: 5px;
 }
@@ -987,6 +992,41 @@ footer {
 
   .about-info__content-images .about-info__images img {
     height: 330px;
+  }
+
+}
+
+@media (min-height: 768px),
+(min-width: 1024px) {
+  .main-content {
+    height: 65vh;
+  }
+
+  .content-details__ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-height: 414px),
+(min-width: 736px) {
+  .about {
+    padding-top: 40px
+  }
+
+  .main-content {
+    height: 90vh;
+  }
+
+  .content-details__ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-info__images:nth-child(2) {
+    display: none;
   }
 
 }

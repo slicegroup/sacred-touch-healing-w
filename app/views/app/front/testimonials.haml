@@ -5,8 +5,9 @@
     #Wrapper
       %nav.navbar.navbar-expand-md.fixed-top.navbar-fixed-js
         .container
-          %a.navbar-brand{:href => "#"} 
-            %img#iso.logo-main.scale-with-grid{:alt => "sacred touch healing", "data-height" => "50", "data-retina" => "assets/img/logo.png", :src => "assets/img/logo.png"}/
+          = link_to root_path do
+            .navbar-brand 
+              %img#iso.logo-main.scale-with-grid{:alt => "sacred touch healing", "data-height" => "50", "data-retina" => "assets/img/logo.png", :src => "assets/img/logo.png"}/
           %button.ml-auto.navbar-toggler.p-2.border-0.hamburger.hamburger--elastic.d-none-lg{"data-toggle" => "offcanvas", :type => "button"}
             %span.hamburger-box
               %span.hamburger-inner
