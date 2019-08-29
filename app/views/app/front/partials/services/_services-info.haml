@@ -4,19 +4,19 @@
       .about-info__item
         .about-info__content
           -# %h4.themecolor{:style => "margin-bottom: 6px"} Some story behind us
-          %div.nav-language.nav-language__show
-            %p.language.language-link.active#show-es ESP
-            %p.language#show-en ENG
           %h2 
             = @services.title
-
+          - unless @services.description_es.blank?
+            %div.nav-language.nav-language__show
+              %p.language.language-link.active#show-es ESP
+              %p.language#show-en ENG
           #en 
             %p.description-about{:style =>"font-weight: 300;font-family: 'Roboto';font-size: 15px;"}
               = raw @services.description
           #es
             %p.description-about{:style =>"font-weight: 300;font-family: 'Roboto';font-size: 15px;"}
               = raw @services.description_es 
-            -# %p.description-about{:style =>"font-weight: 300;font-family: 'Roboto';font-size: 15px;"}
+              -# %p.description-about{:style =>"font-weight: 300;font-family: 'Roboto';font-size: 15px;"}
             
 
       .services-info__item
