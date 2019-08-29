@@ -386,7 +386,7 @@ a:hover {
   padding-top: 80px;
   margin-top: 50px;
   padding-bottom: 0px;
-  background-image: url(../img/back_about2.png);
+  background-image: url(/assets/img/back_about2.png);
   background-repeat: repeat-y;
   background-position: center top;
 }
