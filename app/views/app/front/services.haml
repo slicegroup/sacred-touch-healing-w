@@ -7,7 +7,7 @@
     #Wrapper
       %nav.navbar.navbar-expand-lg.fixed-top.navbar-fixed-js#Home
         .container
-          = link_to root_path do
+          -# = link_to root_path do
           .navbar-brand
             %img#iso.logo-main.scale-with-grid{:alt => "sacred touch healing", "data-height" => "50", "data-retina" => "/assets/img/logo.png", :src => "/assets/img/logo.png"}/
           %button.ml-auto.navbar-toggler.p-2.border-0.hamburger.hamburger--elastic.d-none-lg{"data-toggle" => "offcanvas", :type => "button"}
@@ -17,16 +17,16 @@
             .offcanvas-collapse.fil#navbarNav
               %ul.navbar-nav.ml-auto
                 %li.nav-item.active
-                  %a.nav-link{:href => "#Home"}
+                  %a.nav-link{:href => "/"}
                     Home
                 %li.nav-item
-                  %a.nav-link{:href => "#About"} About me 
+                  %a.nav-link{:href => "/#About"} About me 
                 %li.nav-item
-                  %a.nav-link{:href => "#Services"} Services
+                  %a.nav-link{:href => "/#Services"} Services
                 %li.nav-item
-                  %a.nav-link{:href => "#License"} License       
+                  %a.nav-link{:href => "/#License"} License       
                 %li.nav-item
-                  %a.nav-link{ :href => "#Testimonials"} Testimonials
+                  %a.nav-link{ :href => "/#Testimonials"} Testimonials
                 %li.nav-item
                   %a.nav-link{ :href => "#Contact"} Contact
 
