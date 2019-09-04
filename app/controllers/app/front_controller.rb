@@ -5,7 +5,6 @@ module App
     before_action :message
 
     def send_message
-    
     end
     
     def new_message

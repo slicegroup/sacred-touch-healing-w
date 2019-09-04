@@ -2,7 +2,7 @@
 
 # ApplicationMailer
 class ApplicationMailer < ActionMailer::Base
-  default from: 'pruebajose98617@gmail.com'
+  default from: 'jonorebra@gmail.com'
   layout 'mailers/mailer'
 
   after_action :set_smtp
