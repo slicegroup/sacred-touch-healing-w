@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/testimonials/:id', to: 'app/front#testimonials', as: :app_testimonials
   get '/send_message', to: 'app/front#send_message', as: :app_send_message
   post '/new_message', to: 'app/front#new_message', as: :app_new_message
+  get '/mailer', to: 'app/front#mailer', as: :app_mailer
 
   devise_for :users, skip: KepplerConfiguration.skip_module_devise
 

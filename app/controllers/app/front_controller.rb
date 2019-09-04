@@ -35,6 +35,9 @@ module App
     def about
       @testimonies = KepplerTestimonials::Testimony.all
     end
+    def mailer
+     
+    end
 
     def services
       @services = KepplerServices::Service.find(params[:id])
