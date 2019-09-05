@@ -267,21 +267,21 @@
                               %tr
                                 %td.attributes_item
                                   %strong Your name:
-                                  
+                                  = @message[:name]
                               %tr
                                 %td.attributes_item
                                   %strong Your e-mail:
-                                  
+                                  = @message[:to_emails]
                               
                               %tr
                                 %td.attributes_item
                                   %strong Your  subject:
-                                    
+                                  = @message[:subject]  
                               
                               %tr
                                 %td.attributes_item
                                   %strong Message:
-                                    
+                                  = @message[:content]  
                       %p
                         We will contact you as soon as possible.
                         %br/
