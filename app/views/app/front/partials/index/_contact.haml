@@ -80,29 +80,29 @@
 			}
 		}
 
-		$('.keppler-custom-field input, textarea').removeClass('form-control');
-		
-		$("#new_message").validate({
-			event: "blur",
-			errorClass: "error-class",
-			validClass: "valid-class",
-			rules: {																																																																																																																																									
-				'message[name]': { required: true},
-				'message[to_emails]': { required: true, email: true },
-				'message[subject]': { required: true},
-				'message[content]': { required: true},
-				'message[type_message]': { required: true }
-			},
-			messages: {
-				'message[name]': 'Por favor indica tu nombre',
-				'message[to_emails]': 'Introduce un email válido',
-				'message[subject]': 'introduce un subject valido',
-				'message[content]': 'Introduce un mensaje breve',
-				'message[type_message]': 'Type message blank'
-			},
-			debug: true,errorElement: "label",
-			submitHandler: function(form){
-			form.submit();
-			}
-		});
+	$('.keppler-custom-field input, textarea').removeClass('form-control');
+	
+	$("#new_message").validate({
+		event: "blur",
+		errorClass: "error-class",
+		validClass: "valid-class",
+		rules: {																																																																																																																																									
+			'message[name]': { required: true},
+			'message[to_emails]': { required: true, email: true },
+			'message[subject]': { required: true},
+			'message[content]': { required: true},
+			'message[type_message]': { required: true }
+		},
+		messages: {
+			'message[name]': 'Por favor indica tu nombre',
+			'message[to_emails]': 'Introduce un email válido',
+			'message[subject]': 'introduce un subject valido',
+			'message[content]': 'Introduce un mensaje breve',
+			'message[type_message]': 'Type message blank'
+		},
+		debug: true,errorElement: "label",
+		submitHandler: function(form){
+		form.submit();
+		}
+	});
 
