@@ -44,10 +44,11 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address: 'smtp.gmail.com',
     port: 587,
-    domain: Rails.application.secrets.domain,
-    # enable_starttls_auto: true,
-    user_name: "jonorebra@gmail.com",
-    password: "jonorebra98617"
+    domain: Rails.application.secrets.domain_name,
+    authentication: :plain,
+    enable_starttls_auto: true,
+    user_name: Rails.application.secrets.email,
+    password: Rails.application.secrets.password
   }
   # ActionMailer Config
   # Send email in development mode?

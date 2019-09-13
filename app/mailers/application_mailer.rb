@@ -8,7 +8,7 @@ class ApplicationMailer < ActionMailer::Base
   after_action :set_smtp
 
   def testing
-    mail to: 'example@keppler.com', subject: 'Keppler email'
+    mail to: 'jonorebra@gmail.com', subject: 'Keppler email'
   end
 
   private
