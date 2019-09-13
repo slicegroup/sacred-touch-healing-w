@@ -18,9 +18,9 @@ module KepplerTestimonials
 
     def check_dimensions
       return if photo_cache.nil?
-      # if (photo.width < 85 || photo.width > 85) && ( photo.height < 65 || photo.height > 65)
-      #   errors.add :photo, "Dimensión incorrecta <br/> El tamaño de la imágen cargada es de: #{photo.width}x#{photo.height} y no cumple con las dimensiones recomendadas".html_safe
-      # end
+      if (photo.width < 85 || photo.width > 85) && ( photo.height < 65 || photo.height > 65)
+        errors.add :photo, "Dimensión incorrecta <br/> El tamaño de la imágen cargada es de: #{photo.width}x#{photo.height} y no cumple con las dimensiones recomendadas".html_safe
+      end
     end
 
     def self.index_attributes
