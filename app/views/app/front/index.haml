@@ -83,7 +83,8 @@
             .entry-content
               = render 'app/front/partials/index/about.haml'
               %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"}
-              = render 'app/front/partials/index/services.haml'
+              - unless @services.blank?
+                = render 'app/front/partials/index/services.haml'
               = render 'app/front/partials/index/license.haml'
               - unless @testimonies.blank?
                 = render 'app/front/partials/index/testimonials.haml'
