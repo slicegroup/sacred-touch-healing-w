@@ -33,30 +33,50 @@
               
 
       %section.banner
-        .section_wrapper.mcb-section-inner
-          .main-content.main-content__slider
-            - @banners.each do |banner|
+        - if @banners.blank? == true
+          .section_wrapper.mcb-section-inner
+            .main-content.main-content__slider
               .main-content__banner
                 .main-content__items
-                  .main-content__description.content-description__desktop
+                  .main-content__description
                     %h1.main-content__title
-                      = banner.title 
+                      Energy, Frequency
+                      %br/
+                      and Vibration.
                     %p.main-content__text
-                      = banner.subtitle 
+                      Integrate and balance your physical, emotional, 
+                      %br/
+                      mental and etheric bodies. Remove energy
+                      %br/
+                      blockages and work with your cellular 
+                      %br/
+                      memory and DNA.
                     %a.rev-btn.tp-resizeme.scroll.btn.btn-banner{:href => "#About", :target => "_self"} 
                       %i.fa.fa-chevron-down
                   .main-content__img{:style => "z-index: 5"}
-                    .main-content__description.content-description__movil
+                    %img.img-banner{:src => "https://images.unsplash.com/photo-1523681504355-8b4860f99a58?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"}/
+        - else
+          .section_wrapper.mcb-section-inner
+            .main-content.main-content__slider
+              - @banners.each do |banner|
+                .main-content__banner
+                  .main-content__items
+                    .main-content__description.content-description__desktop
                       %h1.main-content__title
                         = banner.title 
                       %p.main-content__text
                         = banner.subtitle 
                       %a.rev-btn.tp-resizeme.scroll.btn.btn-banner{:href => "#About", :target => "_self"} 
                         %i.fa.fa-chevron-down
-                    %img.img-banner{:src => "#{banner.image}"}/
-
-                    -# condición
-                    %img.img-banner{:src => "/assets/img/photo-1510034141778-a4d065653d92.jpeg"}/
+                    .main-content__img{:style => "z-index: 5"}
+                      .main-content__description.content-description__movil
+                        %h1.main-content__title
+                          = banner.title 
+                        %p.main-content__text
+                          = banner.subtitle 
+                        %a.rev-btn.tp-resizeme.scroll.btn.btn-banner{:href => "#About", :target => "_self"} 
+                          %i.fa.fa-chevron-down
+                      %img.img-banner{:src => "#{banner.image}"}/
       #Content.home
         .content_wrapper.clearfix
           .sections_group
@@ -65,7 +85,8 @@
               %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"}
               = render 'app/front/partials/index/services.haml'
               = render 'app/front/partials/index/license.haml'
-              = render 'app/front/partials/index/testimonials.haml'
+              - unless @testimonies.blank?
+                = render 'app/front/partials/index/testimonials.haml'
               
               // = render 'app/front/partials/index/_pricing.haml'
               // = render 'app/front/partials/index/_useful.haml'
