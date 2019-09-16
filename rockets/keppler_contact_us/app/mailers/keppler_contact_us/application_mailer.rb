@@ -6,7 +6,7 @@ module KepplerContactUs
     after_action :set_smtp
 
     def testing
-      mail to: 'jonorebra@gmail.com', subject: 'Keppler email'
+      mail to: 'Sacredtouchhealing77@gmail.com', subject: 'Keppler email'
     end
 
     private

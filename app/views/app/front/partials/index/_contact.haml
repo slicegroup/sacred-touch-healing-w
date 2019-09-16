@@ -65,39 +65,39 @@
 			text: 'Hubo un error en el reCAPTCHA, tu mensaje no ha sido enviado.',
 			footer: '<a href>Why do I have this issue?</a>'
 		})
+
+%script{:src => "https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js"}
 :javascript
-
 	function recaptcha_callback(){
-			// alert('callback working');
-			if (($('#name').val() != '')
-				&& ($('#body').val() != '')
-				&& ($('#email').val() != '')
-				&& ($('#subject').val() != '')) {
-				$('.send').prop('disabled', false);
-			} else {
-				swal('Completa todos los campos');
-				grecaptcha.reset();
-			}
+		// alert('callback working');
+		if (($('#name').val() != '')
+			&& ($('#email').val() != '')
+			&& ($('#subject').val() != '')
+			&& ($('#body').val() != '')) {
+			$('.send').prop('disabled', false);
+		} else {
+			swal('Completa todos los campos');
+			grecaptcha.reset();
 		}
-
+	}
 	$('.keppler-custom-field input, textarea').removeClass('form-control');
 	
 	$("#new_message").validate({
 		event: "blur",
 		errorClass: "error-class",
 		validClass: "valid-class",
-		rules: {																																																																																																																																									
+		rules: {																																																																																																																																																								
 			'message[name]': { required: true},
 			'message[to_emails]': { required: true, email: true },
 			'message[subject]': { required: true},
-			'message[content]': { required: true},
+			'message[content]': { required: true },
 			'message[type_message]': { required: true }
 		},
 		messages: {
-			'message[name]': 'Por favor indica tu nombre',
-			'message[to_emails]': 'Introduce un email válido',
-			'message[subject]': 'introduce un subject valido',
-			'message[content]': 'Introduce un mensaje breve',
+			'message[name]': 'Please indicate your name',
+			'message[subject]': 'Please indicate your subject',
+			'message[to_emails]': 'Please indicate your email',
+			'message[content]': 'Leave a brief message',
 			'message[type_message]': 'Type message blank'
 		},
 		debug: true,errorElement: "label",
