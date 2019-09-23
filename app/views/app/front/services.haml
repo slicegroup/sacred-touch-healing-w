@@ -21,12 +21,14 @@
                     Home
                 %li.nav-item
                   %a.nav-link{:href => "/#About"} About me 
+                - unless @services.blank?
+                  %li.nav-item
+                    %a.nav-link{:href => "/#Services"} Services
                 %li.nav-item
-                  %a.nav-link{:href => "/#Services"} Services
-                %li.nav-item
-                  %a.nav-link{:href => "/#License"} License       
-                %li.nav-item
-                  %a.nav-link{ :href => "/#Testimonials"} Testimonials
+                  %a.nav-link{:href => "/#License"} License    
+                - unless @testimonies.blank?   
+                  %li.nav-item
+                    %a.nav-link{ :href => "/#Testimonials"} Testimonials
                 %li.nav-item
                   %a.nav-link{ :href => "#Contact"} Contact
 

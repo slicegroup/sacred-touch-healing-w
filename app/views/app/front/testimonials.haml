@@ -17,14 +17,15 @@
                 %a.nav-link{:href => "/"}
                   Home
               %li.nav-item
-                %a.nav-link{:href => "/#About"} About me 
-              %li.nav-item
-                %a.nav-link{:href => "/#Services"} Services
+                %a.nav-link{:href => "/#About"} About me
+              - unless @services.blank? 
+                %li.nav-item
+                  %a.nav-link{:href => "/#Services"} Services
               %li.nav-item
                 %a.nav-link{:href => "/#License"} License 
-    
-              %li.nav-item
-                %a.nav-link{ :href => "/#Testimonials"} Testimonials
+              - unless @testimonies.blank?
+                %li.nav-item
+                  %a.nav-link{ :href => "/#Testimonials"} Testimonials
 
       #Content
         .content_wrapper.clearfix
