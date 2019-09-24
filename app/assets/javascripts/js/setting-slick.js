@@ -76,7 +76,7 @@ $('.slider-license').slick({
   responsive: [{
       breakpoint: 1200,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 2,
         slidesToScroll: 1,
         infinite: true,
         dots: false
@@ -151,7 +151,7 @@ $('.content-services').slick({
   responsive: [{
       breakpoint: 1200,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 2,
         slidesToScroll: 1,
         infinite: true,
         dots: false

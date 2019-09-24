@@ -8,9 +8,9 @@
     padding-right: 1rem;
     padding-left: 2.5rem;
     overflow-y: hidden;
-    transition: -webkit-transform .3s ease-in-out;
-    transition: transform .3s ease-in-out;
-    transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+    transition: -webkit-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
     -webkit-transform: translateX(100%);
     transform: translateX(105%);
     background-color: #fff;
@@ -24,7 +24,7 @@
   }
 
   .navbar-nav {
-    margin-right: 0px !important;
+    margin-right: 0 !important;
   }
 }
 
@@ -95,9 +95,9 @@
 }
 
 .nav-underline .nav-link {
-  padding-top: .75rem;
-  padding-bottom: .75rem;
-  font-size: .875rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 0.875rem;
   color: var(--secondary);
 }
 
@@ -123,7 +123,7 @@
 }
 
 .box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, .05);
 }
 
 .lh-100 {
@@ -139,7 +139,7 @@
 }
 
 .hamburger {
-  padding: 15px 15px;
+  padding: 15px;
   display: inline-block;
   cursor: pointer;
   transition-property: opacity, filter;
@@ -152,7 +152,6 @@
   border: 0;
   margin: 0;
   overflow: visible;
-
 
 }
 
@@ -170,8 +169,8 @@
 }
 
 .hamburger-inner,
-.hamburger-inner::before,
-.hamburger-inner::after {
+.hamburger-inner::after,
+.hamburger-inner::before {
   width: 35px;
   height: 3px;
   background-color: #000;
@@ -182,8 +181,8 @@
   transition-timing-function: ease;
 }
 
-.hamburger-inner::before,
-.hamburger-inner::after {
+.hamburger-inner::after,
+.hamburger-inner::before {
   content: "";
   display: block;
 }
@@ -229,6 +228,13 @@
 
 .navbar-fixed-js.fixed {
   position: fixed;
+}
+
+#en p {
+  font-weight: 300;
+  font-family: "Poppins",
+    sans-serif;
+  font-size: 14px;
 }
 
 .btn {
@@ -294,7 +300,7 @@
 }
 
 .license {
-  margin-top: 0px;
+  margin-top: 0;
   padding-top: 100px;
   padding-bottom: 40px;
 }
@@ -306,7 +312,6 @@
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-
 
 .content-services__title h5:hover {
   text-decoration: none;
@@ -322,8 +327,8 @@ a:hover {
 }
 
 .content-column.column-item-br {
-  border-top-left-radius: 0px !important;
-  border-top-right-radius: 0px !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
@@ -336,21 +341,20 @@ a:hover {
 .navbar {
   background-color: transparent;
   height: 90px;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .navbar-fixed-js.fixed {
   background-color: #fff;
   height: 70px;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .navbar-fixed-js.bg-fixed {
   background-color: #fff;
   height: 70px;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
-
 
 .navbar-nav {
   margin-right: -20px;
@@ -392,12 +396,11 @@ a:hover {
   margin-top: -100px;
 }
 
-
 .about {
   padding-top: 80px;
   margin-top: 50px;
-  padding-bottom: 0px;
-  background-image: url(/assets/img/back_about2.png);
+  padding-bottom: 0;
+  background-image: url("/assets/img/back_about2.png");
   background-repeat: repeat-y;
   background-position: center top;
 }
@@ -496,7 +499,7 @@ footer {
 
 /** about */
 .about-info {
-  padding: 100px 0px;
+  padding: 100px 0;
 }
 
 .about-info__vision {
@@ -504,7 +507,7 @@ footer {
 }
 
 .about-parallax {
-  background-image: url(https://images.unsplash.com/photo-1473122430480-d00e6dd25ba8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80);
+  background-image: url("https://images.unsplash.com/photo-1473122430480-d00e6dd25ba8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80");
   background-size: cover;
   height: 80vh;
   background-attachment: fixed;
@@ -519,7 +522,7 @@ footer {
   right: 0;
   bottom: 0;
   background: linear-gradient(45deg, #d291bc 0%, rgba(255, 255, 255, 0) 100%);
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .about-parallax .about-parallax__title {
@@ -592,7 +595,7 @@ footer {
   display: grid;
   grid-gap: 5px;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 50px 0 10px 0;
+  padding: 50px 0 10px;
 }
 
 .about-ideabox__content .about-ideabox__item {
@@ -655,7 +658,7 @@ footer {
   line-height: 60px;
   font-weight: 700;
   color: #000000;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   margin-left: 5px;
   margin-top: 30px;
 }
@@ -668,7 +671,7 @@ footer {
   line-height: 23px;
   font-weight: 300;
   color: #667d80;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   font-family: 'Roboto';
   font-size: 17px;
   margin-top: 20px;
@@ -683,7 +686,7 @@ footer {
 }
 
 .title-section {
-  padding: 40px 0 70px 0;
+  padding: 40px 0 70px;
   text-align: center;
 }
 
@@ -712,7 +715,7 @@ footer {
   right: 0;
   bottom: 0;
   background: linear-gradient(45deg, #d291bc 0%, rgba(255, 255, 255, 0) 100%);
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .services-parallax .services-parallax__title {
@@ -767,7 +770,7 @@ footer {
 }
 
 .main-license__description {
-  padding: 0px 35px 10px 35px;
+  padding: 0 35px 10px;
 }
 
 .img__footer {
@@ -801,6 +804,42 @@ footer {
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
+  .content-text-footer h5 {
+    font-size: 16px !important;
+  }
+
+  .main-content__text {
+    width: 300px;
+  }
+
+  .content-services_description {
+    text-align: center;
+  }
+
+  .content-services__title h5 {
+    font-size: 15px !important;
+  }
+
+  .main-license__boxtitle h5 {
+    font-size: 15px !important;
+  }
+
+  .main-content__title {
+    font-size: 40px !important;
+  }
+
+  .about-img__bottom {
+    display: none;
+  }
+
+  .btn-banner i {
+    margin-top: -2px;
+  }
+
+  .main-license__title {
+    text-align: center;
+  }
+
   .about {
     margin-top: 140px;
   }
@@ -811,11 +850,12 @@ footer {
 
   .navbar {
     background-color: #fff;
+    padding: 0.5rem 0 !important;
   }
 
   .license {
     margin-top: 0;
-    padding-top: 40px;
+    padding-top: 80px;
   }
 
   .about-info__content-images {
@@ -841,7 +881,7 @@ footer {
 
   .content-text-footer {
     justify-content: center;
-    height: 90px;
+    height: 60px;
   }
 
   .img__footer {
@@ -975,8 +1015,11 @@ footer {
   }
 }
 
-
 @media (min-width: 992px) and (max-width: 1199px) {
+  .home {
+    margin-top: 20px !important;
+  }
+
   .content-details__ul {
     margin: 0 0 15px 15px;
   }
@@ -1034,7 +1077,7 @@ footer {
 @media (min-height: 414px),
 (min-width: 736px) {
   .about {
-    padding-top: 40px
+    padding-top: 40px;
   }
 
   .main-content {
