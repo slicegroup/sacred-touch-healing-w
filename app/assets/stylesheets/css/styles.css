@@ -808,10 +808,6 @@ footer {
     font-size: 16px !important;
   }
 
-  .main-content__text {
-    width: 300px;
-  }
-
   .content-services_description {
     text-align: center;
   }
@@ -945,6 +941,7 @@ footer {
   .content-description__movil {
     position: absolute;
     display: block;
+    width: 275px;
   }
 
   .content-description__desktop {
