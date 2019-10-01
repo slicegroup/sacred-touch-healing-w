@@ -20,9 +20,6 @@
               %tbody
                 .form-padding
                   .col-xs-12
-                    = f.input :photo, as: :keppler_file, max_size: 225
-                    %p add images with dimensions: 85x65 / maximum recommended weight: 225kb
-                  .col-xs-12
                     = f.input :name, as: :string
                   .col-xs-12
                     = f.input :testimony, as: :ckeditor, input_html: { ckeditor: { toolbar: 'mini' } }
