@@ -94,7 +94,7 @@ module KepplerTestimonials
       # Only allow a trusted parameter "white list" through.
       def testimony_params
         params.require(:testimony).permit(
-          :name, :testimony, :age, :photo
+          :name, :testimony
         )
       end
     end

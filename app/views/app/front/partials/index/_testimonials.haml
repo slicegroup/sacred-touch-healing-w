@@ -12,8 +12,8 @@
               - @testimonies.each do |testimony|
                 %li
                   = link_to app_testimonials_path(testimony.id) do
-                    .single-photo-img
-                      %img.scale-with-grid.wp-post-image{:src => "#{testimony.photo}"}/
+                    -# .single-photo-img
+                    -#   %img.scale-with-grid.wp-post-image{:src => "#{testimony.photo}"}/
                     .bq_wrapper
                       %blockquote.description-testimonials{:style =>"font-family: 'Roboto';font-size: 15px;"}
                         = raw testimony.testimony
@@ -22,6 +22,6 @@
                       %span
                       %span
                     .author
-                      %h5{:style =>"font-size: 15px;"}= testimony.name + ", " + testimony.age.to_s + " years"
+                      %h5{:style =>"font-size: 15px;"}= testimony.name
                       %span.company
             .slider_pager.slider_pagination

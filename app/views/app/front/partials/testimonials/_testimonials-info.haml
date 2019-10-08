@@ -10,10 +10,10 @@
           .testimonials_slider.single-photo
             %ul.testimonials_slider_ul
               %li
-                .single-photo-img
-                  %img.scale-with-grid.wp-post-image{:src => "#{@testimonies.photo}"}/
+                -# .single-photo-img
+                -#   %img.scale-with-grid.wp-post-image{:src => "#{@testimonies.photo}"}/
                 .author
-                  %h5{:style =>"font-size: 15px;"}= @testimonies.name + ", " + @testimonies.age.to_s + " years"
+                  %h5{:style =>"font-size: 15px;"}= @testimonies.name
                   %span.company
                 -# .bq_wrapper
                 %blockquote.description-testimonials{:style =>"font-family: 'Roboto';font-size: 15px;"}
