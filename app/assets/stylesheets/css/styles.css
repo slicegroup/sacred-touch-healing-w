@@ -512,6 +512,7 @@ footer {
   height: 90vh;
   background-attachment: fixed;
   position: relative;
+  background-repeat: no-repeat;
   background-position: 50% -140px;
 }
 
@@ -805,6 +806,10 @@ footer {
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
+  .about-parallax {
+    background-position: 50% -40px;
+  }
+
   .scale-with-grid {
     width: 55px;
   }
