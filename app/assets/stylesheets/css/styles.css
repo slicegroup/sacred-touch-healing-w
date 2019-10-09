@@ -499,7 +499,7 @@ footer {
 
 /** about */
 .about-info {
-  padding: 100px 0;
+  padding: 100px 0 0 0;
 }
 
 .about-info__vision {
@@ -507,9 +507,9 @@ footer {
 }
 
 .about-parallax {
-  background-image: url("https://images.unsplash.com/photo-1473122430480-d00e6dd25ba8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80");
+  background-image: url("../img/about/Chamana-49.jpg");
   background-size: cover;
-  height: 80vh;
+  height: 90vh;
   background-attachment: fixed;
   position: relative;
   background-position: 50% -140px;
@@ -585,6 +585,7 @@ footer {
 
 .about-info__content-images .about-info__images:nth-child(2) {
   margin-top: 40px;
+  display: block;
 }
 
 .about-info__content-images .about-info__images img {
@@ -1099,4 +1100,9 @@ footer {
     display: none;
   }
 
+}
+
+blockquote p {
+  font-family: 'Roboto' !important;
+  font-size: 15px !important;
 }

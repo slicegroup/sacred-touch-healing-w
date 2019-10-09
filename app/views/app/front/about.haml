@@ -39,7 +39,7 @@
               = render 'app/front/partials/about/parallax.haml'
             
               = render 'app/front/partials/about/about-info.haml'
-              = render 'app/front/partials/about/about-ideabox.haml'
+              -# = render 'app/front/partials/about/about-ideabox.haml'
               %section.about-ideabox
                 .section_wrapper.mcb-section-inner
                   .about-ideabox__content
@@ -48,7 +48,8 @@
                     .about-ideabox__item
 
               = render 'app/front/partials/index/license.haml'
-              = render 'app/front/partials/index/testimonials.haml'
+              - unless @testimonies.blank?
+                = render 'app/front/partials/index/testimonials.haml'
               = render 'app/front/partials/index/contact.haml'
       = render 'app/front/partials/index/footer.haml'
     %script{:src => "/assets/js/jquery-2.1.4.min.js"}
