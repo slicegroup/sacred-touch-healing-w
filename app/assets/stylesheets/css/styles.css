@@ -339,7 +339,7 @@ a:hover {
 }
 
 .navbar {
-  background-color: transparent;
+  background-color: #fff;
   height: 90px;
   transition: 0.3s ease-in-out;
 }
