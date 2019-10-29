@@ -19,7 +19,7 @@
                   %a.nav-link{:href => "/"}
                     Home
                 %li.nav-item
-                  %a.nav-link{:href => "#Header_wrapper"} About me
+                  %a.nav-link{:href => "#Header_wrapper"} About us
                 - unless @services.blank? 
                   %li.nav-item
                     %a.nav-link{:href => "/#Services"} Services
@@ -30,6 +30,10 @@
                     %a.nav-link{ :href => "#Testimonials"} Testimonials
                 %li.nav-item
                   %a.nav-link{ :href => "#Contact"} Contact
+                %li.nav-item{ :style=>"display: flex;justify-content: center;align-items: center;"}
+                  .nav-language
+                    %p.language.language-link.active#show-es ESP
+                    %p.language#show-en ENG
               
 
       #Content

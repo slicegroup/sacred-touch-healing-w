@@ -5,7 +5,7 @@
 
   %body.color-custom.style-default.button-default.layout-full-width.one-page.no-content-padding.header-classic.minimalist-header-no.sticky-header.sticky-tb-color.ab-hide.subheader-both-center.menu-link-color.menuo-right.menuo-no-borders.footer-copy-center.mobile-tb-hide.mobile-side-slide.mobile-mini-mr-ll.tablet-sticky.mobile-header-mini.mobile-sticky.be-reg-20881
     #Wrapper
-      %nav.navbar.navbar-expand-lg.fixed-top.navbar-fixed-js#Home
+      %nav.navbar.navbar-expand-lg.fixed-top.navbar-fixed-js
         .container
           = link_to root_path do
             .navbar-brand
@@ -20,7 +20,7 @@
                   %a.nav-link{:href => "#Home"}
                     Home
                 %li.nav-item
-                  %a.nav-link{:href => "#About"} About me
+                  %a.nav-link{:href => "#About"} About us
                 - unless @services.blank? 
                   %li.nav-item
                     %a.nav-link{:href => "#Services"} Services
@@ -31,10 +31,16 @@
                     %a.nav-link{ :href => "#Testimonials"} Testimonials
                 %li.nav-item
                   %a.nav-link{ :href => "#Contact"} Contact
+                -# - @services.each do |service|
+                -#   - unless service.description_es.blank?
+                %li.nav-item{ :style=>"display: flex;justify-content: center;align-items: center;"}
+                  .nav-language
+                    %p.language.language-link.active#show-es ESP
+                    %p.language#show-en ENG
               
               
 
-      %section.banner
+      %section.banner#Home
         - if @banners.blank? == true
           .section_wrapper.mcb-section-inner
             .main-content.main-content__slider
