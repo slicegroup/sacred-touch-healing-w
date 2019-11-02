@@ -12,7 +12,7 @@ module KepplerServices
     mount_uploader :banner, AttachmentUploader
     mount_uploader :image, AttachmentUploader
     mount_uploader :index, AttachmentUploader
-    validates_presence_of :image, :title, :description, :index, :banner
+    # validates_presence_of :image, :title, :description, :index, :banner
     acts_as_list
     acts_as_paranoid
 

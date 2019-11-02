@@ -6,10 +6,6 @@
           -# %h4.themecolor{:style => "margin-bottom: 6px"} Some story behind us
           %h2 
             = @services.title
-          - unless @services.description_es.blank?
-            %div.nav-language.nav-language__show
-              %p.language.language-link.active#show-es ESP
-              %p.language#show-en ENG
           #en 
             %p.description-about{:style =>"font-weight: 300;font-family: 'Roboto' !important;font-size: 15px;"}
               = raw @services.description
@@ -30,13 +26,13 @@
 :css
   .hidden { display: none }
 
-:javascript
-  $('#show-es').click(function() {
-    $('#en').hide()
-    $('#es').show()
-  })
+-# :javascript
+-#   $('#show-es').click(function() {
+-#     $('#en').hide()
+-#     $('#es').show()
+-#   })
 
-  $('#show-en').click(function() {
-    $('#es').hide()
-    $('#en').show()
-  })
+-#   $('#show-en').click(function() {
+-#     $('#es').hide()
+-#     $('#en').show()
+-#   })
