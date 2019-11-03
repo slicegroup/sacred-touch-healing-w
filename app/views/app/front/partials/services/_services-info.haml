@@ -9,7 +9,7 @@
           #en 
             %p.description-about{:style =>"font-weight: 300;font-family: 'Roboto' !important;font-size: 15px;"}
               = raw @services.description
-          #es
+          #es 
             %p.description-about{:style =>"font-weight: 300;font-family: 'Roboto'!important;font-size: 15px;"}
               = raw @services.description_es 
             
@@ -23,15 +23,4 @@
     %img.scale-with-grid{:src => "/assets/img/logo-circulo.png"}/
 
 :css
-  .hidden { display: none }
-
--# :javascript
--#   $('#show-es').click(function() {
--#     $('#en').hide()
--#     $('#es').show()
--#   })
-
--#   $('#show-en').click(function() {
--#     $('#es').hide()
--#     $('#en').show()
--#   })
+  .es{ display: none }

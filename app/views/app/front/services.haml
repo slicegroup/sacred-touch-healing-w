@@ -65,8 +65,9 @@
     %script{:src => "https://www.google.com/recaptcha/api.js"}
 
     :css
-      .hidden { display: none }
+      .hidden{ display: none }
     :javascript
+      $('#es').hide();
       $('#show-es').click(function() {
         $('#en').hide()
         $('#es').show()
