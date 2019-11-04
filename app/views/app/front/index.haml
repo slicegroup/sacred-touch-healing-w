@@ -32,10 +32,10 @@
 								%li.nav-item
 									%a.nav-link{ :href => "#Contact"} Contac
 								- unless @services.last.description_es.blank?
-									%li.nav-item{ :style=>"display: flex;justify-content: center;align-items: center;"}
+									%li.nav-item{:style=>"display: flex;justify-content: center;align-items: center;"}
 										.nav-language
-											%p.language.language-link.active#show-es ESP
-											%p.language#show-en ENG
+											%a.language.language-link.active#show-es{:href => "#Services"} ESP
+											%a.language#show-en{:href => "#Services"} ENG
 							
 							
 
