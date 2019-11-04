@@ -1,177 +1,192 @@
 !!!
 %html.no-js
-  %head
-    = render 'app/layouts/head'
+	%head
+		= render 'app/layouts/head'
 
-  %body.color-custom.style-default.button-default.layout-full-width.one-page.no-content-padding.header-classic.minimalist-header-no.sticky-header.sticky-tb-color.ab-hide.subheader-both-center.menu-link-color.menuo-right.menuo-no-borders.footer-copy-center.mobile-tb-hide.mobile-side-slide.mobile-mini-mr-ll.tablet-sticky.mobile-header-mini.mobile-sticky.be-reg-20881
-    #Wrapper
-      %nav.navbar.navbar-expand-lg.fixed-top.navbar-fixed-js
-        .container
-          = link_to root_path do
-            .navbar-brand
-              %img#iso.logo-main.scale-with-grid{:alt => "sacred touch healing", "data-height" => "50", "data-retina" => "/assets/img/logo.png", :src => "/assets/img/logo.png"}/
-          %button.ml-auto.navbar-toggler.p-2.border-0.hamburger.hamburger--elastic.d-none-lg{"data-toggle" => "offcanvas", :type => "button"}
-            %span.hamburger-box
-              %span.hamburger-inner
-          .content-offcanvas
-            .offcanvas-collapse.fil#navbarNav
-              %ul.navbar-nav.ml-auto
-                %li.nav-item.active
-                  %a.nav-link{:href => "#Home"}
-                    Home
-                %li.nav-item
-                  %a.nav-link{:href => "#About"} About us
-                - unless @services.blank? 
-                  %li.nav-item
-                    %a.nav-link{:href => "#Services"} Services
-                %li.nav-item
-                  %a.nav-link{:href => "#License"} License
-                - unless @testimonies.blank?       
-                  %li.nav-item
-                    %a.nav-link{ :href => "#Testimonials"} Testimonials
-                %li.nav-item
-                  %a.nav-link{ :href => "#Contact"} Contact
-              
-              
+	%body.color-custom.style-default.button-default.layout-full-width.one-page.no-content-padding.header-classic.minimalist-header-no.sticky-header.sticky-tb-color.ab-hide.subheader-both-center.menu-link-color.menuo-right.menuo-no-borders.footer-copy-center.mobile-tb-hide.mobile-side-slide.mobile-mini-mr-ll.tablet-sticky.mobile-header-mini.mobile-sticky.be-reg-20881
+		#Wrapper
+			%nav.navbar.navbar-expand-lg.fixed-top.navbar-fixed-js
+				.container
+					= link_to root_path do
+						.navbar-brand
+							%img#iso.logo-main.scale-with-grid{:alt => "sacred touch healing", "data-height" => "50", "data-retina" => "/assets/img/logo.png", :src => "/assets/img/logo.png"}/
+					%button.ml-auto.navbar-toggler.p-2.border-0.hamburger.hamburger--elastic.d-none-lg{"data-toggle" => "offcanvas", :type => "button"}
+						%span.hamburger-box
+							%span.hamburger-inner
+					.content-offcanvas
+						.offcanvas-collapse.fil#navbarNav
+							%ul.navbar-nav.ml-auto
+								%li.nav-item.active
+									%a.nav-link{:href => "#Home"}
+										Home
+								%li.nav-item
+									%a.nav-link{:href => "#About"} About us
+								- unless @services.blank? 
+									%li.nav-item
+										%a.nav-link{:href => "#Services"} Services
+								%li.nav-item
+									%a.nav-link{:href => "#License"} License
+								- unless @testimonies.blank?       
+									%li.nav-item
+										%a.nav-link{ :href => "#Testimonials"} Testimonials
+								%li.nav-item
+									%a.nav-link{ :href => "#Contact"} Contac
+								- unless @services.last.description_es.blank?
+									%li.nav-item{ :style=>"display: flex;justify-content: center;align-items: center;"}
+										.nav-language
+											%p.language.language-link.active#show-es ESP
+											%p.language#show-en ENG
+							
+							
 
-      %section.banner#Home
-        - if @banners.blank? == true
-          .section_wrapper.mcb-section-inner
-            .main-content.main-content__slider
-              .main-content__banner
-                .main-content__items
-                  .main-content__description.content-description__desktop
-                    %h1.main-content__title
-                      Energy, Frequency
-                      %br/
-                      and Vibration.
-                    %p.main-content__text
-                      Integrate and balance your physical, emotional, 
-                      %br/
-                      mental and etheric bodies. Remove energy
-                      %br/
-                      blockages and work with your cellular 
-                      %br/
-                      memory and DNA.
-                    %a.rev-btn.tp-resizeme.scroll.btn.btn-banner{:href => "#About", :target => "_self"} 
-                      %i.fa.fa-chevron-down
-                  .main-content__img{:style => "z-index: 5"}
-                    .main-content__description.content-description__movil
-                      %h1.main-content__title
-                        Energy, Frequency
-                        %br/
-                        and Vibration.
-                      %p.main-content__text
-                        Integrate and balance your physical, emotional, 
-                        %br/
-                        mental and etheric bodies. Remove energy
-                        %br/
-                        blockages and work with your cellular 
-                        %br/
-                        memory and DNA.
-                      %a.rev-btn.tp-resizeme.scroll.btn.btn-banner{:href => "#About", :target => "_self"} 
-                        %i.fa.fa-chevron-down
-                    %img.img-banner{:src => "https://images.unsplash.com/photo-1523681504355-8b4860f99a58?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"}/
-                
-        - else
-          .section_wrapper.mcb-section-inner
-            .main-content.main-content__slider
-              - @banners.each do |banner|
-                .main-content__banner
-                  .main-content__items
-                    .main-content__description.content-description__desktop
-                      %h1.main-content__title
-                        = banner.title 
-                      %p.main-content__text
-                        = banner.subtitle 
-                      %a.rev-btn.tp-resizeme.scroll.btn.btn-banner{:href => "#About", :target => "_self"} 
-                        %i.fa.fa-chevron-down
-                    .main-content__img{:style => "z-index: 5"}
-                      .main-content__description.content-description__movil
-                        %h1.main-content__title
-                          = banner.title 
-                        %p.main-content__text
-                          = banner.subtitle 
-                        %a.rev-btn.tp-resizeme.scroll.btn.btn-banner{:href => "#About", :target => "_self"} 
-                          %i.fa.fa-chevron-down
-                      %img.img-banner{:src => "#{banner.image}"}/
-      #Content.home
-        .content_wrapper.clearfix
-          .sections_group
-            .entry-content
-              = render 'app/front/partials/index/about.haml'
-              %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"}
-              - unless @services.blank?
-                = render 'app/front/partials/index/services.haml'
-              = render 'app/front/partials/index/license.haml'
-              - unless @testimonies.blank?
-                = render 'app/front/partials/index/testimonials.haml'
-              
-              // = render 'app/front/partials/index/_pricing.haml'
-              // = render 'app/front/partials/index/_useful.haml'
-              = render 'app/front/partials/index/contact.haml'
-      = render 'app/front/partials/index/footer.haml'
+			%section.banner#Home
+				- if @banners.blank? == true
+					.section_wrapper.mcb-section-inner
+						.main-content.main-content__slider
+							.main-content__banner
+								.main-content__items
+									.main-content__description.content-description__desktop
+										%h1.main-content__title
+											Energy, Frequency
+											%br/
+											and Vibration.
+										%p.main-content__text
+											Integrate and balance your physical, emotional, 
+											%br/
+											mental and etheric bodies. Remove energy
+											%br/
+											blockages and work with your cellular 
+											%br/
+											memory and DNA.
+										%a.rev-btn.tp-resizeme.scroll.btn.btn-banner{:href => "#About", :target => "_self"} 
+											%i.fa.fa-chevron-down
+									.main-content__img{:style => "z-index: 5"}
+										.main-content__description.content-description__movil
+											%h1.main-content__title
+												Energy, Frequency
+												%br/
+												and Vibration.
+											%p.main-content__text
+												Integrate and balance your physical, emotional, 
+												%br/
+												mental and etheric bodies. Remove energy
+												%br/
+												blockages and work with your cellular 
+												%br/
+												memory and DNA.
+											%a.rev-btn.tp-resizeme.scroll.btn.btn-banner{:href => "#About", :target => "_self"} 
+												%i.fa.fa-chevron-down
+										%img.img-banner{:src => "https://images.unsplash.com/photo-1523681504355-8b4860f99a58?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"}/
+								
+				- else
+					.section_wrapper.mcb-section-inner
+						.main-content.main-content__slider
+							- @banners.each do |banner|
+								.main-content__banner
+									.main-content__items
+										.main-content__description.content-description__desktop
+											%h1.main-content__title
+												= banner.title 
+											%p.main-content__text
+												= banner.subtitle 
+											%a.rev-btn.tp-resizeme.scroll.btn.btn-banner{:href => "#About", :target => "_self"} 
+												%i.fa.fa-chevron-down
+										.main-content__img{:style => "z-index: 5"}
+											.main-content__description.content-description__movil
+												%h1.main-content__title
+													= banner.title 
+												%p.main-content__text
+													= banner.subtitle 
+												%a.rev-btn.tp-resizeme.scroll.btn.btn-banner{:href => "#About", :target => "_self"} 
+													%i.fa.fa-chevron-down
+											%img.img-banner{:src => "#{banner.image}"}/
+			#Content.home
+				.content_wrapper.clearfix
+					.sections_group
+						.entry-content
+							= render 'app/front/partials/index/about.haml'
+							%script{:src => "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"}
+							- unless @services.blank?
+								= render 'app/front/partials/index/services.haml'
+							= render 'app/front/partials/index/license.haml'
+							- unless @testimonies.blank?
+								= render 'app/front/partials/index/testimonials.haml'
+							
+							// = render 'app/front/partials/index/_pricing.haml'
+							// = render 'app/front/partials/index/_useful.haml'
+							= render 'app/front/partials/index/contact.haml'
+			= render 'app/front/partials/index/footer.haml'
 
-    #body_overlay
-    / JS
-    %script{:src => "/assets/js/jquery-2.1.4.min.js"}
-    %script{:src => "/assets/js/bootstrap.min.js"}
-    %script{:src => "/assets/js/jquery.plugins.js"}
-    %script{:src => "/assets/js/translate3d.js"}
-    -# %script{:src => "/assets/js/scripts.js"}
-    %script{:src => "/assets/js/slick.min.js"}
-    %script{:src => "/assets/js/fonts.js"}
-    %script{:src => "/assets/js/mfn.menu.js"}
-    %script{:src => "/assets/js/jquery-validate.js", :type => "text/javascript"}
-    %script{:src => "/assets/js/setting-slick.js"}
-    -# %script{:src => "https://snapwidget.com/js/snapwidget.js"}
-    %script{:src => "https://www.google.com/recaptcha/api.js"}
-    :javascript
-      $(window).scroll(function () {
-        if ($(document).scrollTop() > 70 && ($(window).width() >= 768)) {
-          $('.navbar-fixed-js').addClass('fixed');
-          $("#iso").addClass('img-size').attr('src', '/assets/img/logo-horizontal.png').removeClass('scroll-up');
+		#body_overlay
+		/ JS
+		%script{:src => "/assets/js/jquery-2.1.4.min.js"}
+		%script{:src => "/assets/js/bootstrap.min.js"}
+		%script{:src => "/assets/js/jquery.plugins.js"}
+		%script{:src => "/assets/js/translate3d.js"}
+		-# %script{:src => "/assets/js/scripts.js"}
+		%script{:src => "/assets/js/slick.min.js"}
+		%script{:src => "/assets/js/fonts.js"}
+		%script{:src => "/assets/js/mfn.menu.js"}
+		%script{:src => "/assets/js/jquery-validate.js", :type => "text/javascript"}
+		%script{:src => "/assets/js/setting-slick.js"}
+		-# %script{:src => "https://snapwidget.com/js/snapwidget.js"}
+		%script{:src => "https://www.google.com/recaptcha/api.js"}
+		:javascript
 
-        } else {
-          $('.navbar-fixed-js').removeClass('fixed');
-          $("#iso").removeClass('img-size').attr('src', '/assets/img/logo.png').removeClass('scroll-up');
+			
+			$('#show-es').click(function() {
+				$('#en').hide()
+				$('#es').show()
+			})
+			$('#show-en').click(function() {
+				$('#es').hide()
+				$('#en').show()
+			})
+			$(window).scroll(function () {
+				if ($(document).scrollTop() > 70 && ($(window).width() >= 768)) {
+					$('.navbar-fixed-js').addClass('fixed');
+					$("#iso").addClass('img-size').attr('src', '/assets/img/logo-horizontal.png').removeClass('scroll-up');
 
-        }
-      });
-      $(function () {
-        $('[data-toggle="offcanvas"]').on('click', function () {
-          $('.offcanvas-collapse').toggleClass('open');
-          $('body').toggleClasss('offcanvas-expanded');
-        })
-      })
-      let navLanguage = $('.nav-language').find('p.language')
-      $('.language').click(function () {
-        var $this = $(this);
-        if (navLanguage.hasClass('active')) {
-          navLanguage.toggleClass('active');
-        }
-      });
-      $(document).ready(function(){
-        // Add smooth scrolling to all links
-        $("a").on('click', function(event) {
+				} else {
+					$('.navbar-fixed-js').removeClass('fixed');
+					$("#iso").removeClass('img-size').attr('src', '/assets/img/logo.png').removeClass('scroll-up');
 
-          // Make sure this.hash has a value before overriding default behavior
-          if (this.hash !== "") {
-            // Prevent default anchor click behavior
-            event.preventDefault();
+				}
+			});
+			$(function () {
+				$('[data-toggle="offcanvas"]').on('click', function () {
+					$('.offcanvas-collapse').toggleClass('open');
+					$('body').toggleClasss('offcanvas-expanded');
+				})
+			})
+			let navLanguage = $('.nav-language').find('p.language')
+			$('.language').click(function () {
+				var $this = $(this);
+				if (navLanguage.hasClass('active')) {
+					navLanguage.toggleClass('active');
+				}
+			});
+			$(document).ready(function(){
+				// Add smooth scrolling to all links
+				$("a").on('click', function(event) {
 
-            // Store hash
-            var hash = this.hash;
+					// Make sure this.hash has a value before overriding default behavior
+					if (this.hash !== "") {
+						// Prevent default anchor click behavior
+						event.preventDefault();
 
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-            $('html, body').animate({
-              scrollTop: $(hash).offset().top
-            }, 800, function(){
-        
-              // Add hash (#) to URL when done scrolling (default click behavior)
-              window.location.hash = hash;
-            });
-          } // End if
-        });
-      });
+						// Store hash
+						var hash = this.hash;
+
+						// Using jQuery's animate() method to add smooth page scroll
+						// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+						$('html, body').animate({
+							scrollTop: $(hash).offset().top
+						}, 800, function(){
+				
+							// Add hash (#) to URL when done scrolling (default click behavior)
+							window.location.hash = hash;
+						});
+					} // End if
+				});
+			});

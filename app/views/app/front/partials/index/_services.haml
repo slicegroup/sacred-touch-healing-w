@@ -16,19 +16,23 @@
                 %h5{:style => "text-align: center"}
                   = service.title
               - unless service.description_es.blank?
-                .content-services_description{:style =>"font-weight: 300;font-family: 'Roboto';font-size: 15px;text-align:center;"}
-                  = raw service.description.truncate(200)
+                #en 
+                  .content-services_description{:style =>"font-weight: 300;font-family: 'Roboto';font-size: 15px;text-align:center;"}
+                    = raw service.description.truncate(200)
+                #es 
+                  .content-services_description{:style =>"font-weight: 300;font-family: 'Roboto';font-size: 15px;text-align:center;"}
+                    = raw service.description_es.truncate(200)
               
 -# :css
 -#   .hidden { display: none }
 
--# :javascript
--#   $('#show-es').click(function() {
--#     $('#en').hide()
--#     $('#es').show()
--#   })
-
--#   $('#show-en').click(function() {
--#     $('#es').hide()
--#     $('#en').show()
--#   })
+:javascript
+  $('#es').hide();
+  $('#show-es').click(function() {
+    $('#en').hide()
+    $('#es').show()
+  })
+  $('#show-en').click(function() {
+    $('#es').hide()
+    $('#en').show()
+  })
